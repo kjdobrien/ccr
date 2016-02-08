@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/foundation.css' %}"/>
+</head>
+
+<body>
+<div class="container">
+	<div class="row ">
+		<nav>
+			<a href="#">New</a>
+			<a href="/ccrform/view_all_ccr">View All</a>
+			<a href="#">Review</a>
+			<a href="#">Apporove</a>
+			<a href="#">User</a>
+			<a href="#">Logout</a>
+		</nav>
+	</div>
+
+	<div class="row">
+	{% block content %}
+	{% endblock %}
+	</div>
+</div>
+
+<footer></footer> 
+</body> 
+
+</html>

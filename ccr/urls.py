@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+import ccr.views 
 
 urlpatterns = [
-    	url(r'^ccrform/', include('ccrform.urls')),
+    	url(r'^ccrform/', include('ccrform.urls', namespace = "ccrform")),
 	url(r'^admin/', admin.site.urls),
+
+	url(r'^accounts/login/$', ccr.views.login),
+	url(r'^accounts/auth/$', ccr.views.auth_view),
+	url(r'^accounts/logout/$', ccr.views.logout),
+	url(r'^accounts/loggedin/$', ccr.views.loggedin),
+	url(r'^accounts/invalid/$', ccr.views.invalid_login), 
 ]

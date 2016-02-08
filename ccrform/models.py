@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.db import models
-#from managers import UserManager
+#from managers import UsersManager
 
 # Create your models here.
 
@@ -9,6 +9,7 @@ OPEN 		= 'Open'
 FOR_REVIEW 	= 'For Review'
 FOR_APPROVAL	= 'For Approval'
 APPROVED	= 'Approved'
+REJECTED	= 'Rejected'
 COMPLETE	= 'Complete'
 
 STATUS_CHOICES = (
@@ -17,6 +18,7 @@ STATUS_CHOICES = (
 		(FOR_REVIEW, 'For Review'),
 		(FOR_APPROVAL, 'For Approval'),
 		(APPROVED, 'Approved'),
+		(REJECTED, 'Rejected'),
 		(COMPLETE, 'Complete'),
 )
 

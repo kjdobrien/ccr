@@ -1,0 +1,26 @@
+{% extends 'ccrform/base.html' %}
+{% block content %}
+<div>
+{% if ccr_list %}
+	<table id="table_id" class="display">
+		<thead>
+			<tr>
+				<th>Name</th><th>View</th><th>Edit</th>
+			</tr>			
+		</thead>
+		<tbody>
+		{% for ccr in ccr_list %}
+		<tr>
+			<td>{{ ccr.name }}</td>
+			<td><a href="{% url 'ccrform:view_ccr' ccr.id %}">View</a></td>
+			<td><a href="{% url 'ccrform:edit_ccr' ccr.id %}">Edit</a></td>	
+		</tr>
+		{% endfor %}
+		</tbody>
+		</table>
+{% else %}
+	<p>No CCRs</p>
+{% endif %}
+</div>
+
+{% endblock %}
