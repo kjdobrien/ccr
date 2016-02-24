@@ -1,0 +1,78 @@
+html body{
+
+	background-image: url("../img/square.png");
+	background-repeat: repeat;
+}
+
+.second {
+
+	text-align: right;
+}
+
+.ccr_data{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial; 
+}
+
+table {
+	min-width: 100%;
+}
+
+.status {
+	border: 2px solid #eee;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: blue;
+}
+
+h2.Open { background-color: #8df28f;}
+h2.Approved { background-color: orange;}
+h2.Rejected { background-color: red;}
+h2.Complete { background-color: green;}
+
+.create{
+	list-style: none; 
+}
+
+.top-bar{
+	background: #121459;
+	border: 2px solid #eee;
+	border-radius: 10px;
+}
+
+.top-bar a, .menu-text{
+
+	background: #121459;
+	color: #fff;
+
+}
+
+
+#active {
+	background: rgba(0,0,0 0.5);
+	border: solid 3px #fff;
+	border-radius: 25px;
+}
+
+.top-bar, .top-bar ul{
+	background-color: #121459;
+}
+
+
+.top-bar a{
+	background: rgba(0,0,0,0);
+	transition-property: background;
+	transition-duration: 0.25s; 
+	transition-timing-function: linear;
+}
+
+
+
+.top-bar a:hover{
+	background: rgba(255,255,255,0.5);
+	border: solid 3px #fff;
+	border-radius: 25px;
+}

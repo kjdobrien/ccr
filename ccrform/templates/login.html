@@ -6,7 +6,7 @@
 	<p class="error">Invalid Username or Password </p>
 {% endif %}
 <div class="panel panel-default rounded logbox">
-<form action="/accounts/auth/" method="post">{% csrf_token %}
+<form action="/accounts/auth_view/" method="post">{% csrf_token %}
 	<label for="username" >Username: </label>
 	<input type="text" name="username" value="" id="username">
 	<label for="password">Password:</label>

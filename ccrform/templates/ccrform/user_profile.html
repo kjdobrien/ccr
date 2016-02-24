@@ -1,0 +1,35 @@
+
+{% extends 'ccrform/base.html' %}
+{% block content %}
+<h1>{{ request.user.username }}'s Profile</h2>
+
+
+{% if entered %}
+<h2>CCRs</h2>
+	<ul>
+	{% for ccr in entered %}
+		<li><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">{{ ccr.name }}</a></li>
+	{% endfor%}
+	</ul>
+{% endif %}
+
+
+{% if reviews %}
+<h2>Reviews</h2>
+	<ul>
+	{% for r in reviews %}
+		<li><a href="{% url 'ccrform:change_status' r.ccr_number %}">{{ r.name }}</a></li>
+	{% endfor%}
+	</ul>
+{% endif %}
+
+{% if approvals %}
+<h2>Approvals</h2>
+	<ul>
+	{% for a in approvals %}
+		<li><a href="{% url 'ccrform:change_status' a.ccr_number %}">{{ a.name }}</a></li>
+	{% endfor%}
+	</ul>
+{% endif %}
+
+{% endblock %}

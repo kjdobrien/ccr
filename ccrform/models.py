@@ -10,6 +10,7 @@ FOR_REVIEW 	= 'For Review'
 FOR_APPROVAL	= 'For Approval'
 APPROVED	= 'Approved'
 REJECTED	= 'Rejected'
+REJECTED_AMEND 	= 'Rejected for Amendments'
 COMPLETE	= 'Complete'
 
 STATUS_CHOICES = (
@@ -19,6 +20,7 @@ STATUS_CHOICES = (
 		(FOR_APPROVAL, 'For Approval'),
 		(APPROVED, 'Approved'),
 		(REJECTED, 'Rejected'),
+		(REJECTED_AMEND, 'Rejected for Amendments'),
 		(COMPLETE, 'Complete'),
 )
 
@@ -114,26 +116,26 @@ class Ccr(models.Model):
 	reviewer	= models.ForeignKey(User, related_name='nominated_reviewer')
 	approver	= models.ForeignKey(User, related_name='nominated_approver')
 	technology_type = models.CharField(max_length=20, choices=TECH_TYPE_CHOICES)
-  	device_app	= models.CharField(max_length=15, choices=DEVICEAPP_CHOICES)
+  	device_app	= models.CharField(max_length=15, choices=DEVICEAPP_CHOICES, verbose_name="Device or Application")
 	name		= models.CharField(max_length=70)
 	description	= models.TextField()
 	date_of_change	= models.DateField(auto_now=False)
 	reason		= models.TextField()
 	roll_back_plan	= models.TextField()
-	is_downtime	= models.BooleanField(default=False)
+	is_downtime	= models.BooleanField(default=False, verbose_name="Is there Downtime")
 	downtime_duration = models.CharField(max_length=120)
 	time_to_change	= models.CharField(max_length=120)
-	risk		= models.CharField(max_length=4, choices=RISK_CHOICES)
-	users_affected  = models.BooleanField(default=False)
-	maintenance	= models.BooleanField(default=False)
+	risk		= models.CharField(max_length=8, choices=RISK_CHOICES)
+	users_affected  = models.BooleanField(default=False, verbose_name="Are Users Affected?")
+	maintenance	= models.BooleanField(default=False, verbose_name="Is this Standard Maintenance")
 	implamenter	= models.ForeignKey(User, related_name='change_implamenter')
 	location	= models.CharField(max_length=6, choices=LOCATION_CHOICES)
 	date_of_review	= models.DateField(auto_now=False, null=True)
-	comments_r	= models.TextField(null=True)
+	comments_r	= models.TextField(null=True, verbose_name="Comments")
 	date_approved	= models.DateField(auto_now=False, null=True)
-	comments_a	= models.TextField(null=True)
-	completed_by	= models.ForeignKey(User, null=True, related_name='completer')
-	completion_date	= models.DateField(auto_now=False, null=True) 
+	comments_a	= models.TextField(null=True, verbose_name="Comments")
+	completed_by	= models.ForeignKey(User, null=True, related_name='completer', blank=True)
+	completion_date	= models.DateField(auto_now=False, null=True, blank=True) 
 	
 
 

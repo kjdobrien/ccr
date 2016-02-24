@@ -1,13 +1,11 @@
 {% extends 'ccrform/base.html' %}
 {% block content %}
-
-<div class="create no-bullet">
+<div class="no-bullet">
 	<form action="." method="post">{% csrf_token %}
-		<ul class="create">
+		<ul>
 			{{ form.as_ul }}
 		</ul>
-		<input type="submit" value="Submit" class="button radius expand">
+	<input type="submit" value="Submit">
 	</form>
 </div>
-
 {% endblock %}

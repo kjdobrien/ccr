@@ -1,28 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 {% load static %}
+{% load ccr_extras %}
+
 
 <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VGTSI CCR</title>
 <link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/foundation.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/extras.css' %}"/> 
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" charset="uft8" src="{% static 'ccrform/js/foundation.js' %}"></script>
+<script type="text/javascript" charset="uft8" src="{% static 'ccrform/js/app.js' %}"></script>
+<script>
+	$(document).ready(function(){
+		$(document).foundation();
+	});
+</script>
 </head>
 
 <body>
-<div class="container">
-	<div class="row ">
-		<nav>
-			<a href="#">New</a>
-			<a href="/ccrform/view_all_ccr">View All</a>
-			<a href="#">Review</a>
-			<a href="#">Apporove</a>
-			<a href="#">User</a>
-			<a href="#">Logout</a>
-		</nav>
+<div class="row">
+
+	<div class ="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium" >
+		<button class="menu-icon" type="button" data-toggle></button>
+		<div class="title-bar-title">Menu</div>
 	</div>
+	
+	
+	
+	
+		<div class="top-bar radius" id="example-menu">
+			<div class="top-bar-left">
+				<ul class="menu">
+					<li class="menu-text">VGTSI CCR</li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+			{% with request.path as url %}
+		
+			<ul class="medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
+			{% if "/accounts/" not in request.path %}			
+	
+				<li><a href="/ccrform/create_ccr/"
+				{% if url == "/ccrform/create_ccr/"%}
+				id="active"
+				{% endif %}
+				>New</a></li>
+
+				<li><a href="/ccrform/view_all_ccr/" 
+				{% if url == "/ccrform/view_all_ccr/" %}
+				id="active"
+				{% endif %}
+				>View All</a></li>
+
+
+				<li><a href="/ccrform/user_profile/"
+				{% if url == "/ccrform/user_profile/" %}
+				id="active"
+				{% endif %}
+				>{{ request.user.username }}</a></li>
+
+				<li><a href="/accounts/logout/">Logout</a></li>
+		
+				{% endif %}
+			</ul>
+			
+			{% endwith %}
+		</div>
+	</div>
+</div>
 
 	<div class="row">
+	<div class="medium-12 columns no-bullet">
 	{% block content %}
 	{% endblock %}
 	</div>
-</div>
+	</div>
+
 
 <footer></footer> 
 </body> 

@@ -12,8 +12,8 @@
 		{% for ccr in ccr_list %}
 		<tr>
 			<td>{{ ccr.name }}</td>
-			<td><a href="{% url 'ccrform:view_ccr' ccr.id %}">View</a></td>
-			<td><a href="{% url 'ccrform:edit_ccr' ccr.id %}">Edit</a></td>	
+			<td><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">View</a></td>
+			<td><a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}">Edit</a></td>	
 		</tr>
 		{% endfor %}
 		</tbody>

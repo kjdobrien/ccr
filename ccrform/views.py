@@ -8,26 +8,28 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.context_processors import csrf
-from forms import CcrForm, EditCcrForm 
+from forms import CcrForm, EditCcrForm, ReviewStatusForm, ApproveStatusForm
 from ccrform.models import Ccr, Revision, STATUS_CHOICES
-
+from datetime import datetime
+from ccrform.models import User
+from templatetags.ccr_extras import has_group
 
 # Create your views here.
 
-#@login_required 
+@login_required 
 def index(request):
 	return HttpResponse("Welcome to the Index") 
 
-#@login_required
-def view_ccr(request, ccr_id):
-	ccr = get_object_or_404(Ccr, pk=ccr_id)
+@login_required
+def view_ccr(request, ccr_number):
+	ccr = get_object_or_404(Ccr, ccr_number=ccr_number)
 	args = {}
 	args['ccr'] = ccr
 	return render(request, 'ccrform/view_ccr.html', args)
 
 
 	
-#@login_required
+@login_required
 def create_ccr(request):
 	if request.POST:
 		form = CcrForm(request.POST)
@@ -39,63 +41,75 @@ def create_ccr(request):
 			ccr.ccr_number = str(ccr.date) +'-'+ str(ccr.id).zfill(4) 
 			form.save()
 			ccr_number = str(ccr.ccr_number) 
-			return HttpResponseRedirect('/ccrform/ccr/'+ccr_number+'/')
+			return HttpResponseRedirect('ccrform/ccr/'+ccr_number+'/')
 	else:
 		form = CcrForm()
 	args = {}
 	args['form'] = form
 	args.update(csrf(request))
-	return render_to_response('ccrform/create_ccr.html', args)
+	return render(request, 'ccrform/create_ccr.html', args)
 		
-#@login_required
+@login_required
 #@permission_required()	
-def change_status(request, ccr_id):
-	ccr = get_object_or_404(Ccr, pk=ccr_id)
-	
-	if "Approvers" in request.user.groups:
-		form = ApproverStatusForm(request.POST or None, instance=ccr)
+def change_status(request, ccr_number):
+	ccr = get_object_or_404(Ccr, ccr_number=ccr_number)
+	if has_group(request.user, "Approvers"):
+		form = ApproveStatusForm(request.POST or None, instance=ccr)
 		#email = approver email 
 	else:
-		form = ReviewerStatusForm(request.POST or None, instance=ccr)
+		form = ReviewStatusForm(request.POST or None, instance=ccr)
 		#email = reviewer email 
+
+		
 	if request.POST: 
 		if form.is_valid():
 			ccr = form.save(commit=False)
-			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.date)
+			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now)
 			#send_mail() 
 			form.save()
-			return HttpResponseRedirect('ccr/'+str(ccr.id)+'/')
-	else:
+			return HttpResponseRedirect('ccr/'+str(ccr.ccr_number)+'/')
+		
 	
-		args = {}
-		args['form'] = form
-		args.update(csrf(request))
-		return render_to_response('ccrform/review_ccr', args)
+	args = {}
+	args['form'] = form
+	args.update(csrf(request))
+	return render(request, 'ccrform/review_ccr.html', args)
 
-#@login_required
-def edit_ccr(request, ccr_id):
-	ccr = get_object_or_404(Ccr, pk=ccr_id)
+@login_required
+def edit_ccr(request, ccr_number):
+	ccr = get_object_or_404(Ccr, ccr_number=ccr_number)
 	form = EditCcrForm(request.POST or None, instance=ccr)
 	args = {}
 	args['ccr'] = ccr
 	if request.POST:
 		if form.is_valid():
-			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.date)
+			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now())
 			new_rev.save() 
 			form.save()
-			return HttpResponseRedirect('ccr/'+str(ccr.id)+'/')
+			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
  
 	else:
-		form = EditCcrForm()
+		form = EditCcrForm(request.POST or None, instance=ccr)
 	args['form'] = form 
 	args.update(csrf(request))
 	return render(request, 'ccrform/edit_ccr.html', args) 
 
 
-#@login_required
+@login_required
 def view_all_ccr(request):
 	ccr_list = Ccr.objects.all()
 
 	context = {'ccr_list' : ccr_list } 
 	return render(request, 'ccrform/view_all_ccr.html', context)
 
+@login_required
+def user_profile(request):
+	entered = Ccr.objects.filter(entered_by = request.user)
+	reviews = Ccr.objects.filter(reviewer = request.user)
+	approvals = Ccr.objects.filter(approver = request.user) 
+	context = {
+			'entered': entered,
+			'reviews': reviews,
+			'approvals': approvals,
+		}
+	return render(request, 'ccrform/user_profile.html', context)
