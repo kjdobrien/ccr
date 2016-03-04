@@ -3,7 +3,7 @@
 {% block content %}
 <h1>{{ request.user.username }}'s Profile</h2>
 
-
+<div class="row userprofile"> 
 {% if entered %}
 <h2>CCRs</h2>
 	<ul>
@@ -18,7 +18,9 @@
 <h2>Reviews</h2>
 	<ul>
 	{% for r in reviews %}
+		{% if r.status == "For Review" %}
 		<li><a href="{% url 'ccrform:change_status' r.ccr_number %}">{{ r.name }}</a></li>
+		{% endif %}
 	{% endfor%}
 	</ul>
 {% endif %}
@@ -32,4 +34,5 @@
 	</ul>
 {% endif %}
 
+</div>
 {% endblock %}

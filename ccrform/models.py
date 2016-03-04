@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.db import models
+from django.db.models import Q 
+import django_filters
+from django_filters import ChoiceFilter, CharFilter
 #from managers import UsersManager
 
 # Create your models here.
@@ -109,23 +112,30 @@ class Ccr(models.Model):
 		(HIGH, 'High'),
 )
 
+	def limit_to_reviewers():
+		users = User.objects.filter(groups='Reviewers')
+		return users
+
+
+	
+
 	entered_by 	= models.ForeignKey(User, related_name='creator')
 	ccr_number 	= models.CharField(max_length=15)
 	date		= models.DateField(auto_now = True)
-	status		= models.CharField(max_length=15,choices=STATUS_CHOICES,default=OPEN)
-	reviewer	= models.ForeignKey(User, related_name='nominated_reviewer')
-	approver	= models.ForeignKey(User, related_name='nominated_approver')
+	status		= models.CharField(max_length=23,choices=STATUS_CHOICES,default=OPEN)
+	reviewer	= models.ForeignKey(User, related_name='nominated_reviewer', limit_choices_to = {'groups':2})
+	approver	= models.ForeignKey(User, related_name='nominated_approver', limit_choices_to = {'groups':1})
 	technology_type = models.CharField(max_length=20, choices=TECH_TYPE_CHOICES)
-  	device_app	= models.CharField(max_length=15, choices=DEVICEAPP_CHOICES, verbose_name="Device or Application")
+  	device_app	= models.CharField(max_length=15, choices=DEVICEAPP_CHOICES, verbose_name="Device or Application", blank=True)
 	name		= models.CharField(max_length=70)
 	description	= models.TextField()
 	date_of_change	= models.DateField(auto_now=False)
 	reason		= models.TextField()
 	roll_back_plan	= models.TextField()
 	is_downtime	= models.BooleanField(default=False, verbose_name="Is there Downtime")
-	downtime_duration = models.CharField(max_length=120)
+	downtime_duration = models.CharField(max_length=120, null=True)
 	time_to_change	= models.CharField(max_length=120)
-	risk		= models.CharField(max_length=8, choices=RISK_CHOICES)
+	risk		= models.CharField(max_length=8, choices=RISK_CHOICES, null=True)
 	users_affected  = models.BooleanField(default=False, verbose_name="Are Users Affected?")
 	maintenance	= models.BooleanField(default=False, verbose_name="Is this Standard Maintenance")
 	implamenter	= models.ForeignKey(User, related_name='change_implamenter')
@@ -146,5 +156,24 @@ class Revision(models.Model):
 	status_at_rev	= models.CharField(max_length=15,choices=STATUS_CHOICES,default=OPEN)
 	date 		= models.DateField(auto_now=False) 
 
-	
+
+class CcrFilter(django_filters.FilterSet):
+
+	def __init__(self, *args, **kwargs):
+		super(CcrFilter, self).__init__(*args, **kwargs)
+
+		for name, field in self.filters.iteritems():
+			if isinstance(field, ChoiceFilter):
+				field.extra['choices'] = tuple([("","Any"),]+ list(field.extra['choices']))
+
+#	technology_type = django_filters.ChoiceFilter(choices='TECH_TYPE_CHOICES')
+#	status = django_filters.ChoiceFilter(choices='STATUS_CHOICES')
+#	device_app = django_filters.ChoiceFilter(choices='DEVICE_APP_CHOICES')
+#	name = django_filters.CharFilter()
+#	risk = django_filters.ChoiceFilter(choices='RISK_CHOICES')
+#	location = django_filters.ChoiceFilter(choices='LOCATION_CHOICES')
+
+	class Meta:
+		model = Ccr
+		fields = ['technology_type', 'status', 'device_app', 'name', 'risk', 'location']
 

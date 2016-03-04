@@ -33,7 +33,22 @@
 
 
 	</table>
-
+	
+	{% if revs %}
+	<h3>Revisions</h3>
+	<table>
+		<thead><th>Date</th><th>Edited By</th><th>Status</th></thead>
+		<tbody>
+		{% for rev in revs %}
+			<tr>
+			<td>{{ rev.date }}</td>
+			<td>{{ rev.edited_by }}</td>
+			<td>{{ rev.status_at_rev }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
 </div>
 
 {% endblock %}

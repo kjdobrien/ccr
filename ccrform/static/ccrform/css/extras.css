@@ -29,7 +29,7 @@ table {
 }
 
 h2.Open { background-color: #8df28f;}
-h2.Approved { background-color: orange;}
+h2.Approved { background-color: blue;}
 h2.Rejected { background-color: red;}
 h2.Complete { background-color: green;}
 
@@ -75,4 +75,19 @@ h2.Complete { background-color: green;}
 	background: rgba(255,255,255,0.5);
 	border: solid 3px #fff;
 	border-radius: 25px;
+}
+
+.sidebar{
+	background: rgba(255, 255, 255, 0.5)
+
+}
+
+.userprofile{
+	background: rgba(255, 255, 255, 0.4);
+	border: solid 3px #fff;
+	
+}
+
+form label{
+	font-weight: bold;
 }

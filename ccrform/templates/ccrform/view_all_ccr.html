@@ -1,26 +1,42 @@
 {% extends 'ccrform/base.html' %}
 {% block content %}
-<div>
-{% if ccr_list %}
-	<table id="table_id" class="display">
-		<thead>
-			<tr>
-				<th>Name</th><th>View</th><th>Edit</th>
-			</tr>			
-		</thead>
-		<tbody>
-		{% for ccr in ccr_list %}
-		<tr>
+<div class="row">
+
+	<div class="small-2 columns sidebar">
+	<h3>Find</h3>
+	<form action="" method="get">
+	{{ filtered.form.as_p }}
+	<input type="submit"/>
+	</form>
+	</div>
+
+
+	<div class="small-10 columns">	
+		{% if filtered %}
+			<table id="table_id" class="display">
+				<thead>
+					<tr>
+						<th>Name</th><th>Status</th><th>View</th><th>Edit</th>
+					</tr>			
+				</thead>
+				<tbody>
+				{% for ccr in filtered %}
+				<tr>
 			<td>{{ ccr.name }}</td>
+			<td>{{ ccr.status }}</td>
 			<td><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">View</a></td>
 			<td><a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}">Edit</a></td>	
-		</tr>
+				</tr>
+		
+		
 		{% endfor %}
-		</tbody>
-		</table>
-{% else %}
-	<p>No CCRs</p>
+				</tbody>
+			</table>
+		{% else %}
+		<p>No CCRs</p>
 {% endif %}
+
+	</div>
 </div>
 
 {% endblock %}

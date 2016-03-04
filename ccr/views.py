@@ -19,7 +19,7 @@ def auth_view(request):
 	if user is not None:
 		if user.is_active:
 			login(request, user)
-			return HttpResponseRedirect('/ccrform/create_ccr')
+			return HttpResponseRedirect('/ccrform/user_profile')
 		else:
 			return HttpResponse("Invalid1")
 

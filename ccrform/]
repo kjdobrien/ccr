@@ -102,7 +102,7 @@ def view_all_ccr(request):
 	ccr_list = Ccr.objects.all()
 	f = CcrFilter(request.GET, queryset=Ccr.objects.all())
 	context = {}
-	context['filtered'] = f
+	context['filter'] = f
 	context['ccr_list'] = ccr_list
 	return render(request, 'ccrform/view_all_ccr.html', context)
 

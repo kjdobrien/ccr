@@ -1,15 +1,21 @@
 {% extends 'ccrform/base.html' %}
 {% block content %}
 <div>
-{{ ccr.ccr_number }}
-{{ ccr.entered_by }}
-	<form action ="." method="post">{% csrf_token %}
-	<ul>
-	{{ form.as_ul }}
+
+	<table>	
+		<tr><td>CCR Number:</td><td class="second">{{ ccr.ccr_number }}</td></tr>
+		<tr><td>Entered By:</td><td class="second">{{ ccr.entered_by }}</td></tr>
+		<tr><td>Reviewers Comments:</td><td class="second">{{ ccr.comments_r }}</td></tr>
+		<tr><td>Approvers Comments:</td><td class="second">{{ ccr.comments_a }}</td></tr>
+	</table>
+
+<form action ="." method="post">{% csrf_token %}
+	<ul class="no-bullet">
+		{{ form.as_ul }}
 	</ul>
-{{ ccr.comments_r }}
-{{ ccr.comments_a }}
 	<input type="submit" name="submit" value="Submit">
-	</form>
+</form>
+
+
 </div>
 {% endblock %}

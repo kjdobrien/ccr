@@ -1,5 +1,5 @@
 from django import forms
-from models import Ccr, Revision 
+from models import Ccr, Revision, STATUS_CHOICES 
 
 
 class CcrForm(forms.ModelForm):
@@ -16,10 +16,21 @@ class ReviewStatusForm(forms.ModelForm):
 		model = Ccr
 		fields = ['status', 'date_of_review', 'comments_r']
 
+	def __init__(self, *args, **kwargs):
+		super(ReviewStatusForm, self).__init__(*args, **kwargs)
+		limit_choices = [STATUS_CHOICES[2], STATUS_CHOICES[4], STATUS_CHOICES[5]]
+		self.fields['status'].choices = limit_choices
+			
+
 class ApproveStatusForm(forms.ModelForm):
 	class Meta:
 		model = Ccr
 		fields = ['status','date_approved', 'comments_a']
+		
+	def __init__(self, *args, **kwargs):
+		super(ApproveStatusForm, self).__init__(*args, **kwargs)
+		limit_choices = [STATUS_CHOICES[3], STATUS_CHOICES[4], STATUS_CHOICES[5]]
+		self.fields['status'].choices = limit_choices
 
 class EditCcrForm(forms.ModelForm):
 	class Meta: 
