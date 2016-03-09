@@ -8,16 +8,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>VGTSI CCR</title>
 <link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/foundation.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/extras.css' %}"/> 
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/foundation-datepicker.css' %}"/><link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/extras.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/jquery-ui.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'ccrform/css/general_foundicons.css' %}"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="{% static 'ccrform/js/jquery-ui.js' %}"></script>
 <script type="text/javascript" charset="uft8" src="{% static 'ccrform/js/foundation.js' %}"></script>
-<script type="text/javascript" charset="uft8" src="{% static 'ccrform/js/app.js' %}"></script>
+<script type="text/javascript" charset="uft8" src="{% static 'ccrform/js/foundation-datepicker.js' %}"></script>
+
 <script>
 	$(document).ready(function(){
 		$(document).foundation();
+		$("#datepicker").datepicker({
+			dateFormat: "yy-mm-dd"
+		});	
 	});
 </script>
+
 </head>
 
 <body>

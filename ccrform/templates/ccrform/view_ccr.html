@@ -1,42 +1,54 @@
 {% extends 'ccrform/base.html'%}
 {% block content %}
 
-<div class="ccr_data">
-	<h2 style="text-align:left;float:left;">{{ ccr.name }}</h2><h2 class="radius status {{ ccr.status }}" style="text-align:right;float:right;">{{ ccr.status }}</h2>
-<hr style="clear:both;"/> 		
-	<table>
-
-	<tr><td>CCR Number:</td><td class="second">{{ ccr.ccr_number }}</td></tr>
-	<tr><td>Created On:</td><td class="second">{{ ccr.date }}</td></tr>
-	<tr><td>Reviewer:</td><td class="second">{{ ccr.reviewer }}</td></tr>
-	<tr><td>Approver:</td><td class="second">{{ ccr.approver}}</td></tr>
-	<tr><td>Technology Type:</td><td class="second">{{ ccr.technology_type}}</td></tr>
-	<tr><td>Device or Application:</td><td class="second">{{ ccr.device_app }}</td></tr>
-	<tr><td>Description:</td><td class="second">{{ ccr.description }}</td></tr>
-	<tr><td>Date Of Change:</td><td class="second">{{ ccr.date_of_change }}</td></tr>
-	<tr><td>Reason For Change:</td><td class="second">{{ ccr.reason }}</td></tr>
-	<tr><td>Rollback Plan:</td><td class="second">{{ ccr.roll_back_plan }}</td></tr>
-	<tr><td>Downtime:</td><td class="second">{{ ccr.is_downtime }}</td></tr>
-	<tr><td>Downtime Duration:</td><td class="second">{{ ccr.downtime_duration }}</td></tr>
-	<tr><td>Time to Change:</td><td  class="second">{{ ccr.time_to_change }}</td></tr>
-	<tr><td>Risk Level:</td><td  class="second">{{ ccr.risk }}</td></tr>
-	<tr><td>Are Users Affected:</td><td  class="second">{{ ccr.users_affected }}</td></tr>
-	<tr><td>Is this Standard Maintenance:</td><td class="second">{{ ccr.maintenance }}</td></tr>
-	<tr><td>Implamenter:</td><td class="second">{{ ccr.implamenter }}</td></tr>
-	<tr><td>Location:</td><td  class="second">{{ ccr.location }}</td></tr>
-	<tr><td>Date of Review</td><td  class="second">{{ ccr.date_of_review }}</td></tr>
-	<tr><td>Reviewer's Comments:</td><td  class="second">{{ ccr.comments_r }}</td></tr>
-	<tr><td>Date of Approval:</td><td  class="second">{{ ccr.date_approved }}</td></tr>
-	<tr><td>Approvers Comments:</td><td  class="second">{{ ccr.comments_a }}</td></tr>
-	<tr><td>Completed By:</td><td  class="second">{{ ccr.completed_by }}</td></tr>
-	<tr><td>Completion Date:</td><td  class="second">{{ ccr.completion_date }}</td></tr>
-
-
-	</table>
-	
+	<div class="row">
+	<a href="/ccrform/view_all_ccr/" ><i class="foundicon-left-arrow"></i> Back to List</a>
+	&nbsp;
+	{% if request.user == ccr.entered_by %}
+	<a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}"><i class="foundicon-edit"></i> Edit</a>
+	{% endif %}
+	&nbsp;
 	{% if revs %}
-	<h3>Revisions</h3>
-	<table>
+	<a href="#revisions"><i class="foundicon-clock"></i> Jump to Revisions</a>
+	{% endif %}
+
+	</div>
+	<div class="ccr_data">
+		<h2 style="text-align:left;float:left;">{{ ccr.name }}</h2><h2 class="radius status {{ ccr.status }}" style="text-align:right;float:right;">{{ ccr.status }}</h2>
+		<hr style="clear:both;"/> 		
+		<table>
+
+		<tr><td class="first">CCR Number:</td><td class="second">{{ ccr.ccr_number }}</td></tr>
+		<tr><td class="first">Created On:</td><td class="second">{{ ccr.date }}</td></tr>
+		<tr><td class="first">Reviewer:</td><td class="second">{{ ccr.reviewer }}</td></tr>
+		<tr><td class="first">Approver:</td><td class="second">{{ ccr.approver}}</td></tr>
+		<tr><td class="first">Technology Type:</td><td class="second">{{ ccr.technology_type}}</td></tr>
+		<tr><td class="first">Device or Application:</td><td class="second">{{ ccr.device_app }}</td></tr>
+		<tr><td class="first">Description:</td><td class="second">{{ ccr.description }}</td></tr>
+		<tr><td class="first">Date Of Change:</td><td class="second">{{ ccr.date_of_change }}</td></tr>
+		<tr><td class="first">Reason For Change:</td><td class="second">{{ ccr.reason }}</td></tr>
+		<tr><td class="first">Rollback Plan:</td><td class="second">{{ ccr.roll_back_plan }}</td></tr>
+		<tr><td class="first">Downtime:</td><td class="second">{{ ccr.is_downtime }}</td></tr>
+		<tr><td class="first">Downtime Duration:</td><td class="second">{{ ccr.downtime_duration }}</td></tr>
+		<tr><td class="first">Time to Change:</td><td  class="second">{{ ccr.time_to_change }}</td></tr>
+		<tr><td class="first">Risk Level:</td><td  class="second">{{ ccr.risk }}</td></tr>
+		<tr><td class="first">Are Users Affected:</td><td  class="second">{{ ccr.users_affected }}</td></tr>
+		<tr><td class="first">Is this Standard Maintenance:</td><td class="second">{{ ccr.maintenance }}</td></tr>
+		<tr><td class="first">Implamenter:</td><td class="second">{{ ccr.implamenter }}</td></tr>
+		<tr><td class="first">Location:</td><td  class="second">{{ ccr.location }}</td></tr>
+		<tr><td class="first">Date of Review</td><td  class="second">{{ ccr.date_of_review }}</td></tr>
+		<tr><td class="first">Reviewer's Comments:</td><td  class="second">{{ ccr.comments_r }}</td></tr>
+		<tr><td class="first">Date of Approval:</td><td  class="second">{{ ccr.date_approved }}</td></tr>
+		<tr><td class="first">Approvers Comments:</td><td  class="second">{{ ccr.comments_a }}</td></tr>
+		<tr><td class="first">Completed By:</td><td  class="second">{{ ccr.completed_by }}</td></tr>
+		<tr><td class="first">Completion Date:</td><td  class="second">{{ ccr.completion_date }}</td></tr>
+		
+
+		</table>
+	
+		{% if revs %}
+		<h3>Revisions</h3>
+		<table id="revisions">
 		<thead><th>Date</th><th>Edited By</th><th>Status</th></thead>
 		<tbody>
 		{% for rev in revs %}
@@ -47,8 +59,7 @@
 			</tr>
 		{% endfor %}
 		</tbody>
-	</table>
-	{% endif %}
+		</table>
+		{% endif %}
 </div>
-
 {% endblock %}

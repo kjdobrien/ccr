@@ -6,11 +6,13 @@ class CcrForm(forms.ModelForm):
 	class Meta:
 		model = Ccr
 		widgets = {
-		'date_of_change' : forms.SelectDateWidget,
+
+		'date_of_change' : forms.DateInput(attrs={'id' : 'datepicker'}),
 		'is_downtime' : forms.CheckboxInput(attrs={'switch':'is_downtime'}),
 		}
+		date_of_change = forms.DateField(widget=forms.DateInput(attrs={'class':'datepicker'}))
 		fields = ['reviewer', 'approver', 'technology_type', 'device_app', 'name', 'description', 'date_of_change', 'reason', 'roll_back_plan', 'is_downtime', 'downtime_duration', 'time_to_change', 'risk', 'users_affected', 'maintenance', 'implamenter', 'location']
-
+	
 class ReviewStatusForm(forms.ModelForm):
 	class Meta:
 		model = Ccr

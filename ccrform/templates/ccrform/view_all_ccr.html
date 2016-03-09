@@ -16,7 +16,7 @@
 			<table id="table_id" class="display">
 				<thead>
 					<tr>
-						<th>Name</th><th>Status</th><th>View</th><th>Edit</th>
+						<th>Name</th><th>Status</th><th>User</th><th>View</th><th>Edit</th>
 					</tr>			
 				</thead>
 				<tbody>
@@ -24,8 +24,9 @@
 				<tr>
 			<td>{{ ccr.name }}</td>
 			<td>{{ ccr.status }}</td>
+			<td>{{ ccr.entered_by }}</td>
 			<td><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">View</a></td>
-			<td><a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}">Edit</a></td>	
+			<td>{% if request.user == ccr.entered_by %}<a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}">Edit</a>{% else %} <span class="faded">Edit<span> {% endif %}</td>
 				</tr>
 		
 		

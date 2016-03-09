@@ -4,35 +4,57 @@
 <h1>{{ request.user.username }}'s Profile</h2>
 
 <div class="row userprofile"> 
+<div class="box">
 {% if entered %}
 <h2>CCRs</h2>
-	<ul>
+	<ul class="no-bullet">
 	{% for ccr in entered %}
-		<li><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">{{ ccr.name }}</a></li>
+		<div class="well">
+		<li>{{ ccr.name }}</li>
+		<li>{{ ccr.status }}</li>		
+		<li>{{ ccr.date }}</li>
+		<li><a href="{% url 'ccrform:view_ccr' ccr.ccr_number %}">View</a>/<a href="{% url 'ccrform:edit_ccr' ccr.ccr_number %}">Edit</a></li>
+		</div>
 	{% endfor%}
 	</ul>
 {% endif %}
+</div>
 
-
+<div class="box">
 {% if reviews %}
 <h2>Reviews</h2>
-	<ul>
+	<ul class="no-bullet">
 	{% for r in reviews %}
-		{% if r.status == "For Review" %}
-		<li><a href="{% url 'ccrform:change_status' r.ccr_number %}">{{ r.name }}</a></li>
-		{% endif %}
+		<div class="well">
+		<li>{{ r.name }}</li>
+		<li>{{ r.status }}</li>		
+		<li>{{ r.date }}</li>
+		<li>{{ r.entered_by }}</li>
+		<li><a href="{% url 'ccrform:view_ccr' r.ccr_number %}">View</a>/<a href="{% url 'ccrform:change_status' r.ccr_number %}">Review</a></li>
+		</div>
+
 	{% endfor%}
 	</ul>
 {% endif %}
+</div>
 
+<div class="box">
 {% if approvals %}
 <h2>Approvals</h2>
-	<ul>
+	<ul class="no-bullet">
 	{% for a in approvals %}
-		<li><a href="{% url 'ccrform:change_status' a.ccr_number %}">{{ a.name }}</a></li>
+		<div class="well">
+		<li>{{ a.name }}</li>
+		<li>{{ a.status }}</li>		
+		<li>{{ a.date }}</li>
+		<li>{{ a.entered_by }}</li>
+		<li><a href="{% url 'ccrform:view_ccr' a.ccr_number %}">View</a>/<a href="{% url 'ccrform:change_status' a.ccr_number %}">Approve/Reject</a></li>
+		</div>
+
+	
 	{% endfor%}
 	</ul>
 {% endif %}
-
+</div>
 </div>
 {% endblock %}

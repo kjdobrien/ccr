@@ -166,12 +166,7 @@ class CcrFilter(django_filters.FilterSet):
 			if isinstance(field, ChoiceFilter):
 				field.extra['choices'] = tuple([("","Any"),]+ list(field.extra['choices']))
 
-#	technology_type = django_filters.ChoiceFilter(choices='TECH_TYPE_CHOICES')
-#	status = django_filters.ChoiceFilter(choices='STATUS_CHOICES')
-#	device_app = django_filters.ChoiceFilter(choices='DEVICE_APP_CHOICES')
-#	name = django_filters.CharFilter()
-#	risk = django_filters.ChoiceFilter(choices='RISK_CHOICES')
-#	location = django_filters.ChoiceFilter(choices='LOCATION_CHOICES')
+	name = django_filters.CharFilter(lookup_type='icontains')
 
 	class Meta:
 		model = Ccr
