@@ -156,6 +156,12 @@ class Revision(models.Model):
 	status_at_rev	= models.CharField(max_length=15,choices=STATUS_CHOICES,default=OPEN)
 	date 		= models.DateField(auto_now=False) 
 
+class Notification(models.Model):
+	user 	= models.ForeignKey(User)
+	ccr	= models.ForeignKey(Ccr)
+	seen 	= models.BooleanField(default=False)
+	date	= models.DateField(auto_now=True)
+
 
 class CcrFilter(django_filters.FilterSet):
 

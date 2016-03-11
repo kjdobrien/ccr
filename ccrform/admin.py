@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Ccr, Revision
+from .models import User, Ccr, Revision, Notification
 # Register your models here.
 
 
@@ -13,6 +13,6 @@ class RevisionAdmin(admin.ModelAdmin):
 
 admin.site.register(Ccr)
 admin.site.register(Revision)
-
+admin.site.register(Notification)
 
 

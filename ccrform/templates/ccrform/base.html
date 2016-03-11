@@ -64,13 +64,16 @@
 				{% endif %}
 				>Find</a></li>
 
-
+				{% with request.user as user%}
 				<li><a href="/ccrform/user_profile/"
 				{% if url == "/ccrform/user_profile/" %}
-				id="active"
-				{% endif %}
-				>{{ request.user.username }}</a></li>
-
+					id="active"
+				{% endif %}>
+				{{ request.user.username }}
+				{% if request.user|has_notification %}
+					<i class="foundicon-idea"></i>	
+				{% endif %}</a></li>
+				{% endwith %}
 				<li><a href="/accounts/logout/">Logout</a></li>
 		
 				{% endif %}

@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, render_to_response, get_object_or_404 
 from django import forms 
 from django.core.mail import send_mail
@@ -11,9 +11,10 @@ from django.template.context_processors import csrf
 from forms import CcrForm, EditCcrForm, ReviewStatusForm, ApproveStatusForm
 from ccrform.models import Ccr, Revision, STATUS_CHOICES, CcrFilter
 from datetime import datetime
-from ccrform.models import User, Revision
+from ccrform.models import User, Revision, Notification
 from templatetags.ccr_extras import has_group
 import django_filters
+ 
 # Create your views here.
 
 @login_required 
@@ -43,6 +44,8 @@ def create_ccr(request):
 			ccr.ccr_number = str(ccr.date) +'-'+ str(ccr.id).zfill(4) 
 			form.save()
 			ccr_number = str(ccr.ccr_number) 
+			notification = Notification(user=ccr.reviewer, ccr=ccr)
+			notification.save()
 			return HttpResponseRedirect('/ccrform/ccr/'+ccr_number+'/')
 	else:
 		form = CcrForm()
@@ -58,8 +61,10 @@ def change_status(request, ccr_number):
 	if has_group(request.user, "Approvers"):
 		form = ApproveStatusForm(request.POST or None, instance=ccr)
 		#email = approver email 
+		new_notification_for = ccr.entered_by
 	else:
 		form = ReviewStatusForm(request.POST or None, instance=ccr)
+		new_notification_for = ccr.approver
 		#email = reviewer email 
 
 		
@@ -69,6 +74,10 @@ def change_status(request, ccr_number):
 			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now)
 			#send_mail() 
 			form.save()
+			notification = get_object_or_404(Notification, ccr=ccr)
+			notification.user = new_notification_for
+			notification.seen = False
+			notification.save()
 			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
 		
 	
@@ -88,6 +97,9 @@ def edit_ccr(request, ccr_number):
 			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now())
 			new_rev.save() 
 			form.save()
+			notification = get_object_or_404(Notification, ccr=ccr)
+			notification.seen = True
+			notification.save()
 			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
  
 	else:
@@ -108,12 +120,14 @@ def view_all_ccr(request):
 
 @login_required
 def user_profile(request):
-	entered = Ccr.objects.filter(entered_by = request.user)
-	reviews = Ccr.objects.filter(reviewer = request.user)
-	approvals = Ccr.objects.filter(approver = request.user) 
+	entered = Ccr.objects.filter(entered_by = request.user).order_by('-date')
+	reviews = Ccr.objects.filter(reviewer = request.user, status="For Review").order_by('-date')
+	approvals = Ccr.objects.filter(approver = request.user, status="For Approval").order_by('-date')
 	context = {
 			'entered': entered,
 			'reviews': reviews,
 			'approvals': approvals,
 		}
 	return render(request, 'ccrform/user_profile.html', context)
+
+
