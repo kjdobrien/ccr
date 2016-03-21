@@ -2,6 +2,7 @@ html body{
 
 	background-image: url("../img/square.png");
 	background-repeat: repeat;
+
 }
 
 .second {
@@ -28,10 +29,12 @@ table {
 	background-color: blue;
 }
 
-h2.Open { background-color: #8df28f;}
+h2.Open     { background-color: #8df28f;}
 h2.Approved { background-color: blue;}
 h2.Rejected { background-color: red;}
 h2.Complete { background-color: green;}
+h2.Review   { background-color: rgb(134, 0, 255);} 
+h2.Approval { background-color: rgb(255, 90, 0);}
 
 .create{
 	list-style: none; 
@@ -102,7 +105,9 @@ form label{
 }
 
 .description {
-	font-family : serif; 
+	font-family : "MS Serif"; 
+	font-size : 18px;
+	text-align: justify;
 }
 
 .helptext {

@@ -71,9 +71,11 @@ def change_status(request, ccr_number):
 	if request.POST: 
 		if form.is_valid():
 			ccr = form.save(commit=False)
-			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now)
+			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now())
+			
 			#send_mail() 
 			form.save()
+			new_rev.save()
 			notification = get_object_or_404(Notification, ccr=ccr)
 			notification.user = new_notification_for
 			notification.seen = False
@@ -88,25 +90,30 @@ def change_status(request, ccr_number):
 
 @login_required
 def edit_ccr(request, ccr_number):
+
 	ccr = get_object_or_404(Ccr, ccr_number=ccr_number)
-	form = EditCcrForm(request.POST or None, instance=ccr)
-	args = {}
-	args['ccr'] = ccr
-	if request.POST:
-		if form.is_valid():
-			new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now())
-			new_rev.save() 
-			form.save()
-			notification = get_object_or_404(Notification, ccr=ccr)
-			notification.seen = True
-			notification.save()
-			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
- 
-	else:
+	if request.user == ccr.entered_by:
 		form = EditCcrForm(request.POST or None, instance=ccr)
-	args['form'] = form 
-	args.update(csrf(request))
-	return render(request, 'ccrform/edit_ccr.html', args) 
+		args = {}
+		args['ccr'] = ccr
+		if request.POST:
+			if form.is_valid():
+				new_rev = Revision(edited_by=request.user, ccr_ref=ccr, status_at_rev=ccr.status, date=datetime.now())
+				new_rev.save() 
+				form.save()
+				if ccr.status == "Complete" or "Rejected":
+					notification = get_object_or_404(Notification, ccr=ccr)
+					notification.seen = True
+					notification.save()
+				return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
+ 
+		else:
+			form = EditCcrForm(request.POST or None, instance=ccr)
+		args['form'] = form 
+		args.update(csrf(request))
+		return render(request, 'ccrform/edit_ccr.html', args) 
+	else:	
+		return HttpResponse("You can't edit this, get lost!")
 
 
 @login_required

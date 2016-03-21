@@ -16,6 +16,7 @@ class CcrForm(forms.ModelForm):
 class ReviewStatusForm(forms.ModelForm):
 	class Meta:
 		model = Ccr
+		widgets = {'date_of_review' : forms.DateInput(attrs={'id' : 'datepicker'}),}	
 		fields = ['status', 'date_of_review', 'comments_r']
 
 	def __init__(self, *args, **kwargs):
@@ -27,6 +28,7 @@ class ReviewStatusForm(forms.ModelForm):
 class ApproveStatusForm(forms.ModelForm):
 	class Meta:
 		model = Ccr
+		widgets = {'date_approved' : forms.DateInput(attrs={'id' : 'datepicker'}),}	
 		fields = ['status','date_approved', 'comments_a']
 		
 	def __init__(self, *args, **kwargs):
@@ -37,6 +39,11 @@ class ApproveStatusForm(forms.ModelForm):
 class EditCcrForm(forms.ModelForm):
 	class Meta: 
 		model = Ccr
+		widgets = {
+			#'date_of_change' : forms.DateInput(attrs={'id': 'datepicker'}),
+			'completion_date': forms.DateInput(attrs={'id': 'datepicker'}),
+		
+		}
 		exclude = ('entered_by', 'ccr_number', 'date_of_review', 'comments_r', 'date_approved', 'comments_a',)
 
 
