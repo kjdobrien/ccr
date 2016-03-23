@@ -18,7 +18,10 @@ html body{
 }
 
 table {
-	min-width: 100%;
+	width: 100%;
+	margin-left: 0;
+	overflow-x: scroll;
+	
 }
 
 .status {
@@ -81,7 +84,8 @@ h2.Approval { background-color: rgb(255, 90, 0);}
 }
 
 .sidebar{
-	background: rgba(241, 241, 241, 0.7)
+	background: rgba(241, 241, 241, 0.7);
+	width: 15%;
 
 }
 
@@ -142,4 +146,17 @@ form label{
 
 .foundicon-idea{
 	color: #fff;
+}
+
+@media (max-width: 400px){
+	.sidebar{ margin:0; padding:0;width:100%;position:relative;}
+	.expander{margin:1px;padding:3px 10px;cursor:pointer;position:relative;border:solid 1px #e3e3e3; }
+/*	.expander_content{padding:5px 10px;} */
+	.ccrtable{width:100%;}
+	.title-bar{width:100%;}
+}
+
+.disappear{
+
+	display:none;
 }

@@ -2,6 +2,7 @@ from django import forms
 from models import Ccr, Revision, STATUS_CHOICES 
 
 
+
 class CcrForm(forms.ModelForm):
 	class Meta:
 		model = Ccr

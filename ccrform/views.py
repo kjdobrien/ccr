@@ -53,9 +53,9 @@ def create_ccr(request):
 	args['form'] = form
 	args.update(csrf(request))
 	return render(request, 'ccrform/create_ccr.html', args)
+
 		
 @login_required
-#@permission_required()	
 def change_status(request, ccr_number):
 	ccr = get_object_or_404(Ccr, ccr_number=ccr_number)
 	if has_group(request.user, "Approvers"):
@@ -77,16 +77,18 @@ def change_status(request, ccr_number):
 			form.save()
 			new_rev.save()
 			notification = get_object_or_404(Notification, ccr=ccr)
-			notification.user = new_notification_for
+			if "Rejected" not in ccr.status:
+				notification.user = new_notification_for
+			else:
+				notification.user = ccr.entered_by
 			notification.seen = False
 			notification.save()
-			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
-		
-	
+			return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')	
 	args = {}
 	args['form'] = form
 	args.update(csrf(request))
 	return render(request, 'ccrform/review_ccr.html', args)
+
 
 @login_required
 def edit_ccr(request, ccr_number):
@@ -113,7 +115,7 @@ def edit_ccr(request, ccr_number):
 		args.update(csrf(request))
 		return render(request, 'ccrform/edit_ccr.html', args) 
 	else:	
-		return HttpResponse("You can't edit this, get lost!")
+		return noaccess(request)
 
 
 @login_required
@@ -127,6 +129,7 @@ def view_all_ccr(request):
 
 @login_required
 def user_profile(request):
+	
 	entered = Ccr.objects.filter(entered_by = request.user).order_by('-date')
 	reviews = Ccr.objects.filter(reviewer = request.user, status="For Review").order_by('-date')
 	approvals = Ccr.objects.filter(approver = request.user, status="For Approval").order_by('-date')
@@ -134,7 +137,10 @@ def user_profile(request):
 			'entered': entered,
 			'reviews': reviews,
 			'approvals': approvals,
+			
 		}
 	return render(request, 'ccrform/user_profile.html', context)
 
-
+@login_required
+def noaccess(request):
+	return render(request, 'ccrform/noaccess.html')

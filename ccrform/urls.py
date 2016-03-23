@@ -10,5 +10,7 @@ urlpatterns = [
 	url(r'^edit_ccr/(?P<ccr_number>(.*))/$', views.edit_ccr, name='edit_ccr'),
 	url(r'^review_ccr/(?P<ccr_number>(.*))/$', views.change_status, name='change_status'),
 	url(r'^user_profile/$', views.user_profile, name='user_profile'),
+	url(r'^noaccess/$', views.noaccess, name='noaccess')
+
 ]
 

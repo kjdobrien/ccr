@@ -27,6 +27,34 @@
 	});
 </script>
 
+<script>
+
+	if ($(window).width() <= 400){
+		
+		jQuery(document).ready(function(){
+			jQuery(".expander_content").hide();
+		jQuery(".expander").click(function()
+		{
+		jQuery(this).next(".expander_content").toggle("blind", 100);
+			});
+		});
+	}
+</script>
+<script>
+
+	$('#id').click(function(e){
+		e.preventDefault();
+		$.ajax({
+			type:'POST',
+			url:'/ccrform/seen/',
+			data:{'submit':true}
+			success:function(result){
+				alert("Seen");
+			});
+});
+
+</script>
+
 </head>
 
 <body>
@@ -65,14 +93,17 @@
 				>Find</a></li>
 
 				{% with request.user as user%}
-				<li><a href="/ccrform/user_profile/"
+				<li id="user"><a href="/ccrform/user_profile/"
 				{% if url == "/ccrform/user_profile/" %}
 					id="active"
 				{% endif %}>
 				{{ request.user.username }}
+			
 				{% if request.user|has_notification %}
-					<i class="foundicon-idea"></i>	
-				{% endif %}</a></li>
+				<i class="foundicon-idea"></i>
+				{% endif %}
+				</a>
+				</li>
 				{% endwith %}
 				<li><a href="/accounts/logout/">Logout</a></li>
 		
