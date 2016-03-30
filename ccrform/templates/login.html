@@ -5,14 +5,14 @@
 {% if form.errors %}
 	<p class="error">Invalid Username or Password </p>
 {% endif %}
-<div class="panel panel-default rounded logbox">
-<form action="/accounts/auth_view/" method="post">{% csrf_token %}
+<div class="well">
+<form action="/accounts/auth_view/" method="post" id="logbox">{% csrf_token %}
 	<label for="username" >Username: </label>
 	<input type="text" name="username" value="" id="username">
 	<label for="password">Password:</label>
 	<input type="password" name="password" value="" id="password">
 
-	<input type="submit" value="login" />
+	<input type="submit" value="Login"  id="login"/>
 </form> 
 </div>
 {% endblock %}

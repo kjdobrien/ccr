@@ -42,16 +42,11 @@
 </script>
 <script>
 
-	$('#id').click(function(e){
-		e.preventDefault();
-		$.ajax({
-			type:'POST',
-			url:'/ccrform/seen/',
-			data:{'submit':true}
-			success:function(result){
-				alert("Seen");
-			});
+	$('#user').click(function(){
+		$('#notification').css("visibility", "hidden");
+		return false;
 });
+
 
 </script>
 
@@ -100,7 +95,7 @@
 				{{ request.user.username }}
 			
 				{% if request.user|has_notification %}
-				<i class="foundicon-idea"></i>
+				<i class="foundicon-idea" id="notification"></i>
 				{% endif %}
 				</a>
 				</li>

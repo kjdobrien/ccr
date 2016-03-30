@@ -21,6 +21,8 @@ urlpatterns = [
     	url(r'^ccrform/', include('ccrform.urls', namespace = "ccrform")),
 	url(r'^admin/', admin.site.urls),
 
+	#url(r'^$', ccr.views.home),
+
 	url(r'^accounts/login/$', ccr.views.login_view),
 	url(r'^accounts/auth_view/$', ccr.views.auth_view),
 	url(r'^accounts/logout/$', ccr.views.logout_view),

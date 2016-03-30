@@ -109,8 +109,7 @@ form label{
 }
 
 .description {
-	font-family : "MS Serif"; 
-	font-size : 18px;
+ 
 	text-align: justify;
 }
 
@@ -159,4 +158,9 @@ form label{
 .disappear{
 
 	display:none;
+}
+
+#logbox{
+	margin: 0 auto;
+	width: 30%;
 }

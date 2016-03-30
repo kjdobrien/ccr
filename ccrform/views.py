@@ -2,8 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, render_to_response, get_object_or_404 
 from django import forms 
 from django.core.mail import send_mail
-from django.template import RequestContext
-#from ccrform.managers import User 
+from django.template import RequestContext 
 from django.contrib.auth.models import User 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -14,7 +13,21 @@ from datetime import datetime
 from ccrform.models import User, Revision, Notification
 from templatetags.ccr_extras import has_group
 import django_filters
- 
+from django.core.mail import send_mail
+
+NEW_CCR_EMAIL = "You have a new CCR for review. Follow the link to view http://192.168.126.129/ccrform/ccr/"+ ccr.ccr_number + "/" 
+
+REVIEWED_CCR_EMAIL = "The CCR "+ccr.ccr_number+" has been reviewed with the following comments: " +ccr.comments_r 
+
+FOR_APPROVAL_EMAIL = "The CCR "+ccr.ccr_number+" requires your approval. Follow the link to CCR site. http://192.168.126.129/ccrform" 
+
+APPROVED_EMAIL = "The CCR "+ccr.ccr_number+" has been approved with the following comments: "+ccr.comments_a+" Please follow the link to complete the CCR "
+
+
+
+
+
+
 # Create your views here.
 
 @login_required 
@@ -39,7 +52,7 @@ def create_ccr(request):
 		if form.is_valid():
 			ccr = form.save(commit=False)
 			ccr.entered_by = request.user 
-			#send_mail() to reviewer 
+			send_mail('New CCR', NEW_CCR_EMAIL, 'kieran.obrien@vgtsi.com', [ccr.reviewer.email], fail_silently=False)  
 			form.save()	
 			ccr.ccr_number = str(ccr.date) +'-'+ str(ccr.id).zfill(4) 
 			form.save()

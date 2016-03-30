@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 import os
-from access import DB_UN, DB_PW
+from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
 
 
 
@@ -128,3 +128,32 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Security 
+
+#CSRF_COOKIE_SECURE = True
+
+#CSRF_COOKIE_HTTPONLY = True
+
+X_FRAME_OPTIONS = 'DENY'
+
+SECURE_BROWSER_XSS_FILTER = True
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Email Setup
+
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+
+EMAIL_HOST = 'email-smtp.eu-west-1.amazonaws.com'
+
+EMAIL_PORT = 465
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = SMTP_USER
+
+EMAIL_HOST_PASSWORD = SMTP_PASSWORD
+
+
+
