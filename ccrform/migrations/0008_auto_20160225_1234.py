@@ -17,6 +17,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='ccr',
             name='reviewer',
-            field=models.ForeignKey(default='Vincent', on_delete=django.db.models.deletion.CASCADE, related_name='nominated_reviewer', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.CASCADE, related_name='nominated_reviewer', to=settings.AUTH_USER_MODEL),
         ),
     ]

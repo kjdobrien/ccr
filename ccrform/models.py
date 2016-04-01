@@ -133,7 +133,7 @@ class Ccr(models.Model):
 	reason		= models.TextField()
 	roll_back_plan	= models.TextField()
 	is_downtime	= models.BooleanField(default=False, verbose_name="Is there Downtime")
-	downtime_duration = models.CharField(max_length=120, blank=True)
+	downtime_duration = models.CharField(max_length=120, blank=True, default="0")
 	time_to_change	= models.CharField(max_length=120)
 	risk		= models.CharField(max_length=8, choices=RISK_CHOICES, null=True)
 	users_affected  = models.BooleanField(default=False, verbose_name="Are Users Affected?")

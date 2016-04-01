@@ -15,13 +15,12 @@ from templatetags.ccr_extras import has_group
 import django_filters
 from django.core.mail import send_mail
 
-NEW_CCR_EMAIL = "You have a new CCR for review. Follow the link to view http://192.168.126.129/ccrform/ccr/"+ ccr.ccr_number + "/" 
 
-REVIEWED_CCR_EMAIL = "The CCR "+ccr.ccr_number+" has been reviewed with the following comments: " +ccr.comments_r 
+#REVIEWED_CCR_EMAIL = "The CCR "+ccr.ccr_number+" has been reviewed with the following comments: "+ccr.comments_r
 
-FOR_APPROVAL_EMAIL = "The CCR "+ccr.ccr_number+" requires your approval. Follow the link to CCR site. http://192.168.126.129/ccrform" 
+#FOR_APPROVAL_EMAIL = "The CCR "+ccr.ccr_number+"  requires your approval. Follow the link to CCR site. http://52.49.166.20/ccrform/userprofile" 
 
-APPROVED_EMAIL = "The CCR "+ccr.ccr_number+" has been approved with the following comments: "+ccr.comments_a+" Please follow the link to complete the CCR "
+#APPROVED_EMAIL = "The CCR " +ccr.ccr_number+ "has been approved with the following comments:" +ccr.comments_a+ " Please follow the link to complete the CCR http://52.49.166.20/ccrform/edit_ccr/"+ccr.ccr_number+"/"
 
 
 
@@ -51,8 +50,9 @@ def create_ccr(request):
 		form = CcrForm(request.POST)
 		if form.is_valid():
 			ccr = form.save(commit=False)
+			NEW_CCR_EMAIL = "You have a new CCR for review. Follow the link to view your CCRs currently for review http://52.49.166.20/ccrform/userprofile/ "
 			ccr.entered_by = request.user 
-			send_mail('New CCR', NEW_CCR_EMAIL, 'kieran.obrien@vgtsi.com', [ccr.reviewer.email], fail_silently=False)  
+			send_mail('New CCR', NEW_CCR_EMAIL, 'support@vgtsi.com', [ccr.reviewer.email], fail_silently=False)  
 			form.save()	
 			ccr.ccr_number = str(ccr.date) +'-'+ str(ccr.id).zfill(4) 
 			form.save()
@@ -119,6 +119,10 @@ def edit_ccr(request, ccr_number):
 				if ccr.status == "Complete" or "Rejected":
 					notification = get_object_or_404(Notification, ccr=ccr)
 					notification.seen = True
+					notification.save()
+				if ccr.status == "For Review":
+					notification.user = ccr.reviewer
+					notification.seen = False 
 					notification.save()
 				return HttpResponseRedirect('/ccrform/ccr/'+str(ccr.ccr_number)+'/')
  

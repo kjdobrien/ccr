@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'ccr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ccr',
+        'NAME': 'ccrsite',
 	'USER': DB_UN,
 	'PASSWORD': DB_PW,
-	'HOST': '',
+	'HOST': 'localhost',
 	'PORT': '', 
     }
 }
@@ -143,17 +143,22 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 # Email Setup
 
-EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_BACKEND = 'django_ses.SESBackend'
 
-EMAIL_HOST = 'email-smtp.eu-west-1.amazonaws.com'
+#EMAIL_HOST = 'email-smtp.eu-west-1.amazonaws.com'
 
-EMAIL_PORT = 465
+AWS_ACCESS_KEY_ID = SMTP_USER
 
-EMAIL_USE_TLS = True
+AWS_SECRET_ACCESS_KEY = SMTP_PASSWORD
 
-EMAIL_HOST_USER = SMTP_USER
+AWS_SES_REGION_NAME = 'eu-west-1'
 
-EMAIL_HOST_PASSWORD = SMTP_PASSWORD
+AWS_SES_REGION_ENDPOINT = 'email.eu-west-1.amazonaws.com'
+
+#EMAIL_PORT = 465
+
+#EMAIL_USE_TLS = True
+
 
 
 

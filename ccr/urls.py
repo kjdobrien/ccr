@@ -23,7 +23,7 @@ urlpatterns = [
 
 	#url(r'^$', ccr.views.home),
 
-	url(r'^accounts/login/$', ccr.views.login_view),
+	url(r'^$', ccr.views.login_view),
 	url(r'^accounts/auth_view/$', ccr.views.auth_view),
 	url(r'^accounts/logout/$', ccr.views.logout_view),
 	url(r'^accounts/loggedin/$', ccr.views.loggedin),
