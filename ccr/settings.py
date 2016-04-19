@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xd-vykv37vkxl#4(zk9lh7k^h#mm9#va7iq3%^pz078%n644pw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['52.51.1.168']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ccrform',
     'django_filters',
+    'access',
+  
 ]
 
 MIDDLEWARE_CLASSES = [

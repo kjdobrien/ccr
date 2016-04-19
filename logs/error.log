@@ -1,0 +1,876 @@
+[Fri Apr 08 14:05:05.159740 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871] mod_wsgi (pid=15468): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:05:05.159778 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871] mod_wsgi (pid=15468): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:05:05.159798 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871] Traceback (most recent call last):
+[Fri Apr 08 14:05:05.159811 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 16, in <module>
+[Fri Apr 08 14:05:05.159862 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     application = get_wsgi_application()
+[Fri Apr 08 14:05:05.159871 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:05:05.160389 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     django.setup()
+[Fri Apr 08 14:05:05.160401 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:05:05.160891 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:05:05.160902 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:05:05.161523 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     self._setup(name)
+[Fri Apr 08 14:05:05.161533 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:05:05.161591 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:05:05.161601 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:05:05.161609 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:05:05.161614 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:05:05.161647 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     __import__(name)
+[Fri Apr 08 14:05:05.161658 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:05:05.161703 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:05:05.161731 2016] [wsgi:error] [pid 15468:tid 140538790106880] [client 84.39.232.242:23871] ImportError: No module named access
+[Fri Apr 08 14:05:12.454839 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873] mod_wsgi (pid=15468): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:05:12.454863 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873] mod_wsgi (pid=15468): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:05:12.454879 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873] Traceback (most recent call last):
+[Fri Apr 08 14:05:12.454897 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 16, in <module>
+[Fri Apr 08 14:05:12.454943 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     application = get_wsgi_application()
+[Fri Apr 08 14:05:12.454950 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:05:12.454961 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     django.setup()
+[Fri Apr 08 14:05:12.454966 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:05:12.454974 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:05:12.454980 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:05:12.454988 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     self._setup(name)
+[Fri Apr 08 14:05:12.454992 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:05:12.454999 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:05:12.455004 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:05:12.455011 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:05:12.455016 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:05:12.455024 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     __import__(name)
+[Fri Apr 08 14:05:12.455028 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:05:12.455036 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:05:12.455051 2016] [wsgi:error] [pid 15468:tid 140538798499584] [client 84.39.232.242:23873] ImportError: No module named access
+[Fri Apr 08 14:07:25.932869 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908] mod_wsgi (pid=15590): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:07:25.932905 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908] mod_wsgi (pid=15590): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:07:25.932925 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908] Traceback (most recent call last):
+[Fri Apr 08 14:07:25.932939 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 16, in <module>
+[Fri Apr 08 14:07:25.932988 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     application = get_wsgi_application()
+[Fri Apr 08 14:07:25.932998 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:07:25.933029 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     django.setup()
+[Fri Apr 08 14:07:25.933039 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:07:25.933076 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:07:25.933084 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:07:25.933135 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     self._setup(name)
+[Fri Apr 08 14:07:25.933142 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:07:25.933153 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:07:25.933158 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:07:25.933165 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:07:25.933170 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:07:25.933196 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     __import__(name)
+[Fri Apr 08 14:07:25.933203 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:07:25.933239 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:07:25.933254 2016] [wsgi:error] [pid 15590:tid 140054700930816] [client 84.39.232.242:23908] ImportError: No module named access
+[Fri Apr 08 14:07:42.740128 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911] mod_wsgi (pid=15590): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:07:42.740153 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911] mod_wsgi (pid=15590): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:07:42.740169 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911] Traceback (most recent call last):
+[Fri Apr 08 14:07:42.740186 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 16, in <module>
+[Fri Apr 08 14:07:42.740210 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     application = get_wsgi_application()
+[Fri Apr 08 14:07:42.740217 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:07:42.740227 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     django.setup()
+[Fri Apr 08 14:07:42.740232 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:07:42.740239 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:07:42.740244 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:07:42.740252 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     self._setup(name)
+[Fri Apr 08 14:07:42.740256 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:07:42.740271 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:07:42.740276 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:07:42.740282 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:07:42.740287 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:07:42.740294 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     __import__(name)
+[Fri Apr 08 14:07:42.740299 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:07:42.740306 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:07:42.740320 2016] [wsgi:error] [pid 15590:tid 140054692538112] [client 84.39.232.242:23911] ImportError: No module named access
+[Fri Apr 08 14:07:49.304693 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913] mod_wsgi (pid=15590): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:07:49.304720 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913] mod_wsgi (pid=15590): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:07:49.304737 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913] Traceback (most recent call last):
+[Fri Apr 08 14:07:49.304756 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 16, in <module>
+[Fri Apr 08 14:07:49.304782 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     application = get_wsgi_application()
+[Fri Apr 08 14:07:49.304789 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:07:49.304800 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     django.setup()
+[Fri Apr 08 14:07:49.304805 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:07:49.304814 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:07:49.304819 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:07:49.304827 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     self._setup(name)
+[Fri Apr 08 14:07:49.304831 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:07:49.304839 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:07:49.304844 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:07:49.304850 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:07:49.304865 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:07:49.304874 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     __import__(name)
+[Fri Apr 08 14:07:49.304879 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:07:49.304886 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:07:49.304901 2016] [wsgi:error] [pid 15590:tid 140054684145408] [client 84.39.232.242:23913] ImportError: No module named access
+[Fri Apr 08 14:23:42.373427 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690] mod_wsgi (pid=15729): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:23:42.373466 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690] mod_wsgi (pid=15729): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:23:42.373486 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690] Traceback (most recent call last):
+[Fri Apr 08 14:23:42.373499 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:23:42.373596 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     application = get_wsgi_application()
+[Fri Apr 08 14:23:42.373608 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:23:42.373640 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     django.setup()
+[Fri Apr 08 14:23:42.373649 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:23:42.373677 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:23:42.373685 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:23:42.373746 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     self._setup(name)
+[Fri Apr 08 14:23:42.373754 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:23:42.373766 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:23:42.373771 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:23:42.373779 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:23:42.373784 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:23:42.373811 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     __import__(name)
+[Fri Apr 08 14:23:42.373818 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:23:42.373856 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:23:42.373880 2016] [wsgi:error] [pid 15729:tid 140330419853056] [client 84.39.232.242:24690] ImportError: No module named access
+[Fri Apr 08 14:23:44.509287 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694] mod_wsgi (pid=15729): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:23:44.509303 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694] mod_wsgi (pid=15729): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:23:44.509318 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694] Traceback (most recent call last):
+[Fri Apr 08 14:23:44.509334 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:23:44.509355 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     application = get_wsgi_application()
+[Fri Apr 08 14:23:44.509362 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:23:44.509372 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     django.setup()
+[Fri Apr 08 14:23:44.509377 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:23:44.509386 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:23:44.509391 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:23:44.509400 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     self._setup(name)
+[Fri Apr 08 14:23:44.509404 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:23:44.509411 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:23:44.509416 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:23:44.509423 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:23:44.509428 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:23:44.509436 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     __import__(name)
+[Fri Apr 08 14:23:44.509441 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:23:44.509449 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:23:44.509462 2016] [wsgi:error] [pid 15729:tid 140330428245760] [client 84.39.232.242:24694] ImportError: No module named access
+[Fri Apr 08 14:23:45.206126 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696] mod_wsgi (pid=15729): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:23:45.206149 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696] mod_wsgi (pid=15729): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:23:45.206164 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696] Traceback (most recent call last):
+[Fri Apr 08 14:23:45.206190 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:23:45.206212 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     application = get_wsgi_application()
+[Fri Apr 08 14:23:45.206218 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:23:45.206228 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     django.setup()
+[Fri Apr 08 14:23:45.206233 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:23:45.206242 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:23:45.206247 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:23:45.206255 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     self._setup(name)
+[Fri Apr 08 14:23:45.206260 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:23:45.206267 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:23:45.206271 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:23:45.206278 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:23:45.206283 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:23:45.206291 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     __import__(name)
+[Fri Apr 08 14:23:45.206295 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:23:45.206303 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:23:45.206317 2016] [wsgi:error] [pid 15729:tid 140330436638464] [client 84.39.232.242:24696] ImportError: No module named access
+[Fri Apr 08 14:23:45.860176 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698] mod_wsgi (pid=15728): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:23:45.860211 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698] mod_wsgi (pid=15728): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:23:45.860229 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698] Traceback (most recent call last):
+[Fri Apr 08 14:23:45.860242 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:23:45.860294 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     application = get_wsgi_application()
+[Fri Apr 08 14:23:45.860303 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:23:45.860331 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     django.setup()
+[Fri Apr 08 14:23:45.860349 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:23:45.860378 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:23:45.860385 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:23:45.860446 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     self._setup(name)
+[Fri Apr 08 14:23:45.860453 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:23:45.860463 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:23:45.860472 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:23:45.860480 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:23:45.860485 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:23:45.860513 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     __import__(name)
+[Fri Apr 08 14:23:45.860519 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:23:45.860557 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:23:45.860571 2016] [wsgi:error] [pid 15728:tid 140330280126208] [client 84.39.232.242:24698] ImportError: No module named access
+[Fri Apr 08 14:27:38.998207 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860] mod_wsgi (pid=15865): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:27:38.998243 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860] mod_wsgi (pid=15865): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:27:38.998261 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860] Traceback (most recent call last):
+[Fri Apr 08 14:27:38.998274 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:27:38.998327 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     application = get_wsgi_application()
+[Fri Apr 08 14:27:38.998337 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:27:38.998366 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     django.setup()
+[Fri Apr 08 14:27:38.998375 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:27:38.998412 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:27:38.998419 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:27:38.998480 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     self._setup(name)
+[Fri Apr 08 14:27:38.998508 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:27:38.998519 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:27:38.998524 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:27:38.998531 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:27:38.998535 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:27:38.998563 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     __import__(name)
+[Fri Apr 08 14:27:38.998569 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:27:38.998607 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:27:38.998635 2016] [wsgi:error] [pid 15865:tid 140114676131584] [client 84.39.232.242:24860] ImportError: No module named access
+[Fri Apr 08 14:27:40.283341 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863] mod_wsgi (pid=15864): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:27:40.283377 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863] mod_wsgi (pid=15864): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:27:40.283396 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863] Traceback (most recent call last):
+[Fri Apr 08 14:27:40.283409 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:27:40.283462 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     application = get_wsgi_application()
+[Fri Apr 08 14:27:40.283472 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:27:40.283500 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     django.setup()
+[Fri Apr 08 14:27:40.283509 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:27:40.283535 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:27:40.283542 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:27:40.283602 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     self._setup(name)
+[Fri Apr 08 14:27:40.283609 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:27:40.283619 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:27:40.283624 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:27:40.283631 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:27:40.283645 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:27:40.283674 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     __import__(name)
+[Fri Apr 08 14:27:40.283680 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:27:40.283718 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:27:40.283732 2016] [wsgi:error] [pid 15864:tid 140114718095104] [client 84.39.232.242:24863] ImportError: No module named access
+[Fri Apr 08 14:27:42.645673 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865] mod_wsgi (pid=15865): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:27:42.645695 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865] mod_wsgi (pid=15865): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:27:42.645722 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865] Traceback (most recent call last):
+[Fri Apr 08 14:27:42.645739 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 21, in <module>
+[Fri Apr 08 14:27:42.645761 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     application = get_wsgi_application()
+[Fri Apr 08 14:27:42.645767 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:27:42.645777 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     django.setup()
+[Fri Apr 08 14:27:42.645782 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:27:42.645791 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:27:42.645796 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:27:42.645803 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     self._setup(name)
+[Fri Apr 08 14:27:42.645808 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:27:42.645815 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:27:42.645819 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:27:42.645826 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:27:42.645831 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:27:42.645839 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     __import__(name)
+[Fri Apr 08 14:27:42.645844 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:27:42.645851 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:27:42.645874 2016] [wsgi:error] [pid 15865:tid 140114667738880] [client 84.39.232.242:24865] ImportError: No module named access
+[Fri Apr 08 14:30:48.651614 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898] mod_wsgi (pid=15973): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:30:48.651661 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898] mod_wsgi (pid=15973): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:30:48.651702 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898] Traceback (most recent call last):
+[Fri Apr 08 14:30:48.651716 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 14:30:48.651763 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     application = get_wsgi_application()
+[Fri Apr 08 14:30:48.651772 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:30:48.651801 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     django.setup()
+[Fri Apr 08 14:30:48.651810 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:30:48.651835 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:30:48.651854 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:30:48.651914 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     self._setup(name)
+[Fri Apr 08 14:30:48.651921 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:30:48.651932 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:30:48.651938 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:30:48.651945 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:30:48.651950 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:30:48.651978 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     __import__(name)
+[Fri Apr 08 14:30:48.651985 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:30:48.652022 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:30:48.652036 2016] [wsgi:error] [pid 15973:tid 140230514423552] [client 84.39.232.242:24898] ImportError: No module named access
+[Fri Apr 08 14:35:47.270618 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083] mod_wsgi (pid=16216): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:35:47.270656 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083] mod_wsgi (pid=16216): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:35:47.270694 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083] Traceback (most recent call last):
+[Fri Apr 08 14:35:47.270708 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 14:35:47.270758 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     application = get_wsgi_application()
+[Fri Apr 08 14:35:47.270768 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:35:47.270798 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     django.setup()
+[Fri Apr 08 14:35:47.270806 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:35:47.270833 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:35:47.270840 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:35:47.270902 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     self._setup(name)
+[Fri Apr 08 14:35:47.270909 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:35:47.270920 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:35:47.270928 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:35:47.270937 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:35:47.270942 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:35:47.270969 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     __import__(name)
+[Fri Apr 08 14:35:47.270976 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:35:47.271013 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:35:47.271027 2016] [wsgi:error] [pid 16216:tid 139793302738688] [client 84.39.232.242:25083] ImportError: No module named access
+[Fri Apr 08 14:35:52.847201 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087] mod_wsgi (pid=16217): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 14:35:52.848030 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087] mod_wsgi (pid=16217): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 14:35:52.848054 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087] Traceback (most recent call last):
+[Fri Apr 08 14:35:52.848068 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 14:35:52.848131 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     application = get_wsgi_application()
+[Fri Apr 08 14:35:52.848140 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 14:35:52.848177 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     django.setup()
+[Fri Apr 08 14:35:52.848186 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 14:35:52.848212 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 14:35:52.848219 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 14:35:52.848300 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     self._setup(name)
+[Fri Apr 08 14:35:52.848307 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 14:35:52.848317 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 14:35:52.848322 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 14:35:52.848329 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 14:35:52.848333 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 14:35:52.848359 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     __import__(name)
+[Fri Apr 08 14:35:52.848365 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 14:35:52.848401 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 14:35:52.848415 2016] [wsgi:error] [pid 16217:tid 139793123993344] [client 84.39.232.242:25087] ImportError: No module named access
+[Fri Apr 08 15:02:05.266276 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671] mod_wsgi (pid=16353): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 15:02:05.266312 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671] mod_wsgi (pid=16353): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 15:02:05.266332 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671] Traceback (most recent call last):
+[Fri Apr 08 15:02:05.266346 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 15:02:05.266396 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     application = get_wsgi_application()
+[Fri Apr 08 15:02:05.266405 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 15:02:05.266432 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     django.setup()
+[Fri Apr 08 15:02:05.266441 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 15:02:05.266465 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 15:02:05.266472 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 15:02:05.266533 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     self._setup(name)
+[Fri Apr 08 15:02:05.266540 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 15:02:05.266551 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 15:02:05.266556 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 15:02:05.266563 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 15:02:05.266567 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 15:02:05.266594 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     __import__(name)
+[Fri Apr 08 15:02:05.266600 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 15:02:05.266636 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 15:02:05.266651 2016] [wsgi:error] [pid 16353:tid 140530212312832] [client 84.39.232.242:25671] ImportError: No module named access
+[Fri Apr 08 15:05:16.527911 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744] mod_wsgi (pid=16476): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 15:05:16.527945 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744] mod_wsgi (pid=16476): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 15:05:16.527965 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744] Traceback (most recent call last):
+[Fri Apr 08 15:05:16.527978 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 15:05:16.528027 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     application = get_wsgi_application()
+[Fri Apr 08 15:05:16.528036 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 15:05:16.528064 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     django.setup()
+[Fri Apr 08 15:05:16.528073 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 15:05:16.528098 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 15:05:16.528105 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 15:05:16.528155 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     self._setup(name)
+[Fri Apr 08 15:05:16.528163 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 15:05:16.528173 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 15:05:16.528178 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 15:05:16.528194 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 15:05:16.528199 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 15:05:16.528234 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     __import__(name)
+[Fri Apr 08 15:05:16.528241 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 15:05:16.528279 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 15:05:16.528293 2016] [wsgi:error] [pid 16476:tid 140424839436032] [client 84.39.232.242:25744] ImportError: No module named access
+[Fri Apr 08 15:11:54.627293 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874] mod_wsgi (pid=16716): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 15:11:54.627329 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874] mod_wsgi (pid=16716): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 15:11:54.627348 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874] Traceback (most recent call last):
+[Fri Apr 08 15:11:54.627361 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 15:11:54.627407 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     application = get_wsgi_application()
+[Fri Apr 08 15:11:54.627415 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 15:11:54.627440 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     django.setup()
+[Fri Apr 08 15:11:54.627451 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 15:11:54.627485 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 15:11:54.627492 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 15:11:54.627541 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     self._setup(name)
+[Fri Apr 08 15:11:54.627548 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 15:11:54.627558 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 15:11:54.627563 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 15:11:54.627570 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 15:11:54.627575 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 15:11:54.627601 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     __import__(name)
+[Fri Apr 08 15:11:54.627607 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 15:11:54.627664 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 15:11:54.627679 2016] [wsgi:error] [pid 16716:tid 140462686578432] [client 84.39.232.242:25874] ImportError: No module named access
+[Fri Apr 08 15:15:17.901118 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033] mod_wsgi (pid=16834): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 15:15:17.901152 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033] mod_wsgi (pid=16834): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 15:15:17.901172 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033] Traceback (most recent call last):
+[Fri Apr 08 15:15:17.901185 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 15:15:17.901234 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     application = get_wsgi_application()
+[Fri Apr 08 15:15:17.901243 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 15:15:17.901270 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     django.setup()
+[Fri Apr 08 15:15:17.901279 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 15:15:17.901303 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 15:15:17.901310 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 15:15:17.901360 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     self._setup(name)
+[Fri Apr 08 15:15:17.901367 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 15:15:17.901377 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 15:15:17.901382 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 15:15:17.901389 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 15:15:17.901394 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 15:15:17.901420 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     __import__(name)
+[Fri Apr 08 15:15:17.901427 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 15:15:17.901465 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 15:15:17.901479 2016] [wsgi:error] [pid 16834:tid 139906982590208] [client 84.39.232.242:26033] ImportError: No module named access
+[Fri Apr 08 15:16:50.163836 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041] mod_wsgi (pid=16833): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 08 15:16:50.163877 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041] mod_wsgi (pid=16833): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 08 15:16:50.163897 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041] Traceback (most recent call last):
+[Fri Apr 08 15:16:50.163910 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Fri Apr 08 15:16:50.163958 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     application = get_wsgi_application()
+[Fri Apr 08 15:16:50.163967 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 08 15:16:50.163995 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     django.setup()
+[Fri Apr 08 15:16:50.164003 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 08 15:16:50.164027 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 08 15:16:50.164034 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 08 15:16:50.164084 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     self._setup(name)
+[Fri Apr 08 15:16:50.164091 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 08 15:16:50.164101 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     self._wrapped = Settings(settings_module)
+[Fri Apr 08 15:16:50.164106 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 08 15:16:50.164113 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 08 15:16:50.164117 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 08 15:16:50.164147 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     __import__(name)
+[Fri Apr 08 15:16:50.164154 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 08 15:16:50.164191 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 08 15:16:50.164206 2016] [wsgi:error] [pid 16833:tid 139906932233984] [client 84.39.232.242:26041] ImportError: No module named access
+[Tue Apr 12 13:25:58.109927 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001] mod_wsgi (pid=1134): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 13:25:58.110604 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001] mod_wsgi (pid=1134): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 13:25:58.110632 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001] Traceback (most recent call last):
+[Tue Apr 12 13:25:58.110649 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 13:25:58.110704 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     application = get_wsgi_application()
+[Tue Apr 12 13:25:58.110724 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 13:25:58.111383 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     django.setup()
+[Tue Apr 12 13:25:58.111397 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 13:25:58.112076 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 13:25:58.112088 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 13:25:58.112878 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     self._setup(name)
+[Tue Apr 12 13:25:58.112890 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 13:25:58.112905 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 13:25:58.112913 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 13:25:58.112924 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 13:25:58.112931 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 13:25:58.113684 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     __import__(name)
+[Tue Apr 12 13:25:58.113696 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 13:25:58.113746 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 13:25:58.113778 2016] [wsgi:error] [pid 1134:tid 140254866515712] [client 84.39.232.242:51001] ImportError: No module named access
+[Tue Apr 12 13:25:58.456929 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002] mod_wsgi (pid=1135): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 13:25:58.456966 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002] mod_wsgi (pid=1135): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 13:25:58.456991 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002] Traceback (most recent call last):
+[Tue Apr 12 13:25:58.457007 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 13:25:58.457058 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     application = get_wsgi_application()
+[Tue Apr 12 13:25:58.457070 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 13:25:58.457104 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     django.setup()
+[Tue Apr 12 13:25:58.457115 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 13:25:58.457148 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 13:25:58.457170 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 13:25:58.457247 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     self._setup(name)
+[Tue Apr 12 13:25:58.457257 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 13:25:58.457271 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 13:25:58.457278 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 13:25:58.457303 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 13:25:58.457311 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 13:25:58.457345 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     __import__(name)
+[Tue Apr 12 13:25:58.457355 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 13:25:58.457399 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 13:25:58.457416 2016] [wsgi:error] [pid 1135:tid 140255059486464] [client 84.39.232.242:51002] ImportError: No module named access
+[Tue Apr 12 13:25:58.478103 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003] mod_wsgi (pid=1134): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 13:25:58.478117 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003] mod_wsgi (pid=1134): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 13:25:58.478133 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003] Traceback (most recent call last):
+[Tue Apr 12 13:25:58.478150 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 13:25:58.478175 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     application = get_wsgi_application()
+[Tue Apr 12 13:25:58.478184 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 13:25:58.478197 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     django.setup()
+[Tue Apr 12 13:25:58.478205 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 13:25:58.478217 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 13:25:58.478225 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 13:25:58.478237 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     self._setup(name)
+[Tue Apr 12 13:25:58.478244 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 13:25:58.478255 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 13:25:58.478269 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 13:25:58.478282 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 13:25:58.478290 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 13:25:58.478301 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     __import__(name)
+[Tue Apr 12 13:25:58.478308 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 13:25:58.478319 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 13:25:58.478335 2016] [wsgi:error] [pid 1134:tid 140254858123008] [client 84.39.232.242:51003] ImportError: No module named access
+[Tue Apr 12 13:52:22.010131 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128] mod_wsgi (pid=1511): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 13:52:22.010170 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128] mod_wsgi (pid=1511): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 13:52:22.010192 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128] Traceback (most recent call last):
+[Tue Apr 12 13:52:22.010208 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 13:52:22.010259 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     application = get_wsgi_application()
+[Tue Apr 12 13:52:22.010271 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 13:52:22.010305 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     django.setup()
+[Tue Apr 12 13:52:22.010317 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 13:52:22.010350 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 13:52:22.010360 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 13:52:22.010431 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     self._setup(name)
+[Tue Apr 12 13:52:22.010442 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 13:52:22.010470 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 13:52:22.010479 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 13:52:22.010490 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 13:52:22.010497 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 13:52:22.010591 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     __import__(name)
+[Tue Apr 12 13:52:22.010612 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 13:52:22.010660 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 13:52:22.010678 2016] [wsgi:error] [pid 1511:tid 140029126645504] [client 84.39.232.242:52128] ImportError: No module named access
+[Tue Apr 12 13:54:25.344685 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156] mod_wsgi (pid=1638): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 13:54:25.344738 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156] mod_wsgi (pid=1638): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 13:54:25.344760 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156] Traceback (most recent call last):
+[Tue Apr 12 13:54:25.344775 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 13:54:25.344823 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     application = get_wsgi_application()
+[Tue Apr 12 13:54:25.344834 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 13:54:25.344866 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     django.setup()
+[Tue Apr 12 13:54:25.344877 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 13:54:25.344907 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 13:54:25.344917 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 13:54:25.344970 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     self._setup(name)
+[Tue Apr 12 13:54:25.344980 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 13:54:25.344993 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 13:54:25.345014 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 13:54:25.345026 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 13:54:25.345033 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 13:54:25.345066 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     __import__(name)
+[Tue Apr 12 13:54:25.345075 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 13:54:25.345118 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156]     from ccr.access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 13:54:25.345135 2016] [wsgi:error] [pid 1638:tid 139648879511296] [client 84.39.232.242:52156] ImportError: No module named access
+[Tue Apr 12 14:01:19.483419 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399] mod_wsgi (pid=1765): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Tue Apr 12 14:01:19.483478 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399] mod_wsgi (pid=1765): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Tue Apr 12 14:01:19.483514 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399] Traceback (most recent call last):
+[Tue Apr 12 14:01:19.483530 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Tue Apr 12 14:01:19.483581 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     application = get_wsgi_application()
+[Tue Apr 12 14:01:19.483592 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 12 14:01:19.483629 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     django.setup()
+[Tue Apr 12 14:01:19.483641 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 12 14:01:19.483673 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 12 14:01:19.483682 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 12 14:01:19.483738 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     self._setup(name)
+[Tue Apr 12 14:01:19.483748 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 12 14:01:19.483761 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     self._wrapped = Settings(settings_module)
+[Tue Apr 12 14:01:19.483769 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 12 14:01:19.483793 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 12 14:01:19.483801 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 12 14:01:19.483833 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     __import__(name)
+[Tue Apr 12 14:01:19.483843 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 12 14:01:19.483886 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 12 14:01:19.483902 2016] [wsgi:error] [pid 1765:tid 140423855060736] [client 84.39.232.242:52399] ImportError: No module named access
+[Wed Apr 13 09:43:30.397411 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203] mod_wsgi (pid=2898): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 09:43:30.397441 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203] mod_wsgi (pid=2898): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 09:43:30.397461 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203] Traceback (most recent call last):
+[Wed Apr 13 09:43:30.397475 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 09:43:30.397522 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     application = get_wsgi_application()
+[Wed Apr 13 09:43:30.397541 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 09:43:30.397574 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     django.setup()
+[Wed Apr 13 09:43:30.397584 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 09:43:30.397629 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 09:43:30.397639 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 09:43:30.397692 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     self._setup(name)
+[Wed Apr 13 09:43:30.397702 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 09:43:30.397714 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 09:43:30.397721 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 09:43:30.397731 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 09:43:30.397738 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 09:43:30.397769 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     __import__(name)
+[Wed Apr 13 09:43:30.397778 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 09:43:30.397820 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 09:43:30.397836 2016] [wsgi:error] [pid 2898:tid 139680169727744] [client 84.39.232.242:38203] ImportError: cannot import name DB_UN
+[Wed Apr 13 09:43:32.012183 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204] mod_wsgi (pid=2899): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 09:43:32.012222 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204] mod_wsgi (pid=2899): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 09:43:32.012243 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204] Traceback (most recent call last):
+[Wed Apr 13 09:43:32.012258 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 09:43:32.012321 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     application = get_wsgi_application()
+[Wed Apr 13 09:43:32.012332 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 09:43:32.012364 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     django.setup()
+[Wed Apr 13 09:43:32.012375 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 09:43:32.012420 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 09:43:32.012441 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 09:43:32.012515 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     self._setup(name)
+[Wed Apr 13 09:43:32.012526 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 09:43:32.012540 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 09:43:32.012547 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 09:43:32.012558 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 09:43:32.012565 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 09:43:32.012599 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     __import__(name)
+[Wed Apr 13 09:43:32.012609 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 09:43:32.012654 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 09:43:32.012675 2016] [wsgi:error] [pid 2899:tid 139680136156928] [client 84.39.232.242:38204] ImportError: cannot import name DB_UN
+[Wed Apr 13 10:40:39.915410 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356] mod_wsgi (pid=3035): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 10:40:39.915446 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356] mod_wsgi (pid=3035): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 10:40:39.915480 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356] Traceback (most recent call last):
+[Wed Apr 13 10:40:39.915497 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 10:40:39.915547 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     application = get_wsgi_application()
+[Wed Apr 13 10:40:39.915559 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 10:40:39.915592 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     django.setup()
+[Wed Apr 13 10:40:39.915618 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 10:40:39.915652 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 10:40:39.915676 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 10:40:39.915735 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     self._setup(name)
+[Wed Apr 13 10:40:39.915746 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 10:40:39.915760 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 10:40:39.915780 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 10:40:39.915793 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 10:40:39.915800 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 10:40:39.915850 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     __import__(name)
+[Wed Apr 13 10:40:39.915861 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 10:40:39.915909 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 10:40:39.915941 2016] [wsgi:error] [pid 3035:tid 139670469904128] [client 84.39.232.242:41356] ImportError: cannot import name DB_UN
+[Wed Apr 13 10:56:00.245191 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418] mod_wsgi (pid=3174): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 10:56:00.245230 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418] mod_wsgi (pid=3174): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 10:56:00.245251 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418] Traceback (most recent call last):
+[Wed Apr 13 10:56:00.245268 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 10:56:00.245321 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     application = get_wsgi_application()
+[Wed Apr 13 10:56:00.245333 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 10:56:00.245369 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     django.setup()
+[Wed Apr 13 10:56:00.245381 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 10:56:00.245414 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 10:56:00.245425 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 10:56:00.245536 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     self._setup(name)
+[Wed Apr 13 10:56:00.245556 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 10:56:00.245577 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 10:56:00.245586 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 10:56:00.245599 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 10:56:00.245607 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 10:56:00.245651 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     __import__(name)
+[Wed Apr 13 10:56:00.245674 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 10:56:00.245728 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 10:56:00.245747 2016] [wsgi:error] [pid 3174:tid 140022577624832] [client 84.39.232.242:42418] ImportError: cannot import name DB_UN
+[Wed Apr 13 11:06:42.088882 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267] mod_wsgi (pid=3300): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 11:06:42.088925 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267] mod_wsgi (pid=3300): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 11:06:42.088946 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267] Traceback (most recent call last):
+[Wed Apr 13 11:06:42.088974 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 11:06:42.089035 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     application = get_wsgi_application()
+[Wed Apr 13 11:06:42.089046 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 11:06:42.089078 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     django.setup()
+[Wed Apr 13 11:06:42.089089 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 11:06:42.089118 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 11:06:42.089128 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 11:06:42.089182 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     self._setup(name)
+[Wed Apr 13 11:06:42.089191 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 11:06:42.089204 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 11:06:42.089212 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 11:06:42.089222 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 11:06:42.089229 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 11:06:42.089260 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     __import__(name)
+[Wed Apr 13 11:06:42.089317 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 11:06:42.089416 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 11:06:42.089437 2016] [wsgi:error] [pid 3300:tid 139948318844672] [client 84.39.232.242:43267] ImportError: cannot import name DB_UN
+[Wed Apr 13 11:36:26.349498 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692] mod_wsgi (pid=3456): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Wed Apr 13 11:36:26.349563 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692] mod_wsgi (pid=3456): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Wed Apr 13 11:36:26.349585 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692] Traceback (most recent call last):
+[Wed Apr 13 11:36:26.349601 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Wed Apr 13 11:36:26.349654 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     application = get_wsgi_application()
+[Wed Apr 13 11:36:26.349665 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Wed Apr 13 11:36:26.349698 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     django.setup()
+[Wed Apr 13 11:36:26.349709 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Wed Apr 13 11:36:26.349741 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Apr 13 11:36:26.349750 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Wed Apr 13 11:36:26.349807 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     self._setup(name)
+[Wed Apr 13 11:36:26.349817 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Wed Apr 13 11:36:26.349831 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     self._wrapped = Settings(settings_module)
+[Wed Apr 13 11:36:26.349839 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Wed Apr 13 11:36:26.349850 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Apr 13 11:36:26.349857 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Wed Apr 13 11:36:26.349890 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     __import__(name)
+[Wed Apr 13 11:36:26.349900 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Wed Apr 13 11:36:26.349946 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Wed Apr 13 11:36:26.349963 2016] [wsgi:error] [pid 3456:tid 139863614179072] [client 84.39.232.242:45692] ImportError: cannot import name DB_UN
+[Thu Apr 14 08:32:29.546970 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743] mod_wsgi (pid=4454): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 08:32:29.547015 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743] mod_wsgi (pid=4454): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 08:32:29.547038 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743] Traceback (most recent call last):
+[Thu Apr 14 08:32:29.547054 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 08:32:29.547108 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     application = get_wsgi_application()
+[Thu Apr 14 08:32:29.547145 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Thu Apr 14 08:32:29.547186 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     django.setup()
+[Thu Apr 14 08:32:29.547198 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Thu Apr 14 08:32:29.547232 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Thu Apr 14 08:32:29.547242 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Thu Apr 14 08:32:29.547305 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     self._setup(name)
+[Thu Apr 14 08:32:29.547315 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Thu Apr 14 08:32:29.547330 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     self._wrapped = Settings(settings_module)
+[Thu Apr 14 08:32:29.547337 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Thu Apr 14 08:32:29.547348 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Thu Apr 14 08:32:29.547355 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu Apr 14 08:32:29.547389 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     __import__(name)
+[Thu Apr 14 08:32:29.547399 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Thu Apr 14 08:32:29.547444 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Thu Apr 14 08:32:29.547462 2016] [wsgi:error] [pid 4454:tid 140514259093248] [client 84.39.232.242:55743] ImportError: cannot import name DB_UN
+[Thu Apr 14 10:32:15.988435 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340] mod_wsgi (pid=11354): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:32:15.988488 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340] mod_wsgi (pid=11354): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:32:15.988505 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340] Traceback (most recent call last):
+[Thu Apr 14 10:32:15.988522 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:32:15.988570 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:32:15.988592 2016] [wsgi:error] [pid 11354:tid 139807472142080] [client 84.39.232.242:35340] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate_this.py'
+[Thu Apr 14 10:32:16.767121 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341] mod_wsgi (pid=11354): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:32:16.767150 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341] mod_wsgi (pid=11354): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:32:16.767179 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341] Traceback (most recent call last):
+[Thu Apr 14 10:32:16.767198 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:32:16.767222 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:32:16.767241 2016] [wsgi:error] [pid 11354:tid 139807463749376] [client 84.39.232.242:35341] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate_this.py'
+[Thu Apr 14 10:32:29.996256 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342] mod_wsgi (pid=11539): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:32:29.998035 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342] mod_wsgi (pid=11539): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:32:29.998056 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342] Traceback (most recent call last):
+[Thu Apr 14 10:32:29.998074 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:32:29.998126 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:32:29.998149 2016] [wsgi:error] [pid 11539:tid 140197362644736] [client 84.39.232.242:35342] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate_this.py'
+[Thu Apr 14 10:34:29.375617 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408] mod_wsgi (pid=11676): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:34:29.375666 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408] mod_wsgi (pid=11676): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:34:29.375681 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408] Traceback (most recent call last):
+[Thu Apr 14 10:34:29.375696 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:34:29.375738 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:34:29.375772 2016] [wsgi:error] [pid 11676:tid 140286546446080] [client 84.39.232.242:35408] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate.py'
+[Thu Apr 14 10:34:38.289547 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409] mod_wsgi (pid=11761): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:34:38.289594 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409] mod_wsgi (pid=11761): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:34:38.289610 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409] Traceback (most recent call last):
+[Thu Apr 14 10:34:38.289628 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:34:38.289690 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:34:38.289713 2016] [wsgi:error] [pid 11761:tid 140286424499968] [client 84.39.232.242:35409] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate.py'
+[Thu Apr 14 10:41:52.193578 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550] mod_wsgi (pid=11965): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Thu Apr 14 10:41:52.193672 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550] mod_wsgi (pid=11965): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Thu Apr 14 10:41:52.193695 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550] Traceback (most recent call last):
+[Thu Apr 14 10:41:52.193713 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 23, in <module>
+[Thu Apr 14 10:41:52.193769 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550]     execfile(activate_env, dict(__file__=activate_env))
+[Thu Apr 14 10:41:52.193792 2016] [wsgi:error] [pid 11965:tid 139946719397632] [client 84.39.232.242:35550] IOError: [Errno 2] No such file or directory: '/home/ubuntu/.virtualenvs/ccr-env/bin/activate'
+[Fri Apr 15 11:21:07.114157 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801] mod_wsgi (pid=13292): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 15 11:21:07.114190 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801] mod_wsgi (pid=13292): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 15 11:21:07.114212 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801] Traceback (most recent call last):
+[Fri Apr 15 11:21:07.114230 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 26, in <module>
+[Fri Apr 15 11:21:07.114286 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     application = django.core.wsgi.get_wsgi_application()
+[Fri Apr 15 11:21:07.114298 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 15 11:21:07.114336 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     django.setup()
+[Fri Apr 15 11:21:07.114349 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 15 11:21:07.114385 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 15 11:21:07.114396 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 15 11:21:07.114458 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     self._setup(name)
+[Fri Apr 15 11:21:07.114468 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 15 11:21:07.114483 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     self._wrapped = Settings(settings_module)
+[Fri Apr 15 11:21:07.114491 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 15 11:21:07.114564 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 15 11:21:07.114577 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 15 11:21:07.114619 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     __import__(name)
+[Fri Apr 15 11:21:07.114629 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 15 11:21:07.114688 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 15 11:21:07.114706 2016] [wsgi:error] [pid 13292:tid 140257265649408] [client 84.39.232.242:54801] ImportError: cannot import name DB_UN
+[Fri Apr 15 11:21:07.520980 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802] mod_wsgi (pid=13293): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 15 11:21:07.521027 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802] mod_wsgi (pid=13293): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 15 11:21:07.521050 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802] Traceback (most recent call last):
+[Fri Apr 15 11:21:07.521067 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 26, in <module>
+[Fri Apr 15 11:21:07.521122 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     application = django.core.wsgi.get_wsgi_application()
+[Fri Apr 15 11:21:07.521134 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 15 11:21:07.521169 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     django.setup()
+[Fri Apr 15 11:21:07.521181 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 15 11:21:07.521214 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 15 11:21:07.521224 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 15 11:21:07.521284 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     self._setup(name)
+[Fri Apr 15 11:21:07.521295 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 15 11:21:07.521309 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     self._wrapped = Settings(settings_module)
+[Fri Apr 15 11:21:07.521317 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 15 11:21:07.521328 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 15 11:21:07.521336 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 15 11:21:07.521371 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     __import__(name)
+[Fri Apr 15 11:21:07.521380 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 15 11:21:07.521426 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 15 11:21:07.521446 2016] [wsgi:error] [pid 13293:tid 140257349576448] [client 84.39.232.242:54802] ImportError: cannot import name DB_UN
+[Fri Apr 15 11:21:07.554091 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803] mod_wsgi (pid=13292): Target WSGI script '/home/ubuntu/ccr/ccr/wsgi.py' cannot be loaded as Python module.
+[Fri Apr 15 11:21:07.554120 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803] mod_wsgi (pid=13292): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/wsgi.py'.
+[Fri Apr 15 11:21:07.554148 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803] Traceback (most recent call last):
+[Fri Apr 15 11:21:07.554169 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/home/ubuntu/ccr/ccr/wsgi.py", line 26, in <module>
+[Fri Apr 15 11:21:07.554194 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     application = django.core.wsgi.get_wsgi_application()
+[Fri Apr 15 11:21:07.554202 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 15 11:21:07.554216 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     django.setup()
+[Fri Apr 15 11:21:07.554224 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 15 11:21:07.554236 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 15 11:21:07.554244 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 15 11:21:07.554256 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     self._setup(name)
+[Fri Apr 15 11:21:07.554263 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 15 11:21:07.554274 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     self._wrapped = Settings(settings_module)
+[Fri Apr 15 11:21:07.554281 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 15 11:21:07.554292 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 15 11:21:07.554299 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 15 11:21:07.554310 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     __import__(name)
+[Fri Apr 15 11:21:07.554317 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 15 11:21:07.554328 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 15 11:21:07.554345 2016] [wsgi:error] [pid 13292:tid 140257248864000] [client 84.39.232.242:54803] ImportError: cannot import name DB_UN
+[Fri Apr 15 11:29:23.170826 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940] mod_wsgi (pid=13434): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Fri Apr 15 11:29:23.172844 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940] mod_wsgi (pid=13434): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Fri Apr 15 11:29:23.172874 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940] Traceback (most recent call last):
+[Fri Apr 15 11:29:23.172892 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Fri Apr 15 11:29:23.172951 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     application = django.core.wsgi.get_wsgi_application()
+[Fri Apr 15 11:29:23.172974 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Fri Apr 15 11:29:23.173012 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     django.setup()
+[Fri Apr 15 11:29:23.173025 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Fri Apr 15 11:29:23.173058 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Fri Apr 15 11:29:23.173068 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Fri Apr 15 11:29:23.173129 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     self._setup(name)
+[Fri Apr 15 11:29:23.173140 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Fri Apr 15 11:29:23.173154 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     self._wrapped = Settings(settings_module)
+[Fri Apr 15 11:29:23.173162 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Fri Apr 15 11:29:23.173173 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Fri Apr 15 11:29:23.173181 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Fri Apr 15 11:29:23.173216 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     __import__(name)
+[Fri Apr 15 11:29:23.173226 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Fri Apr 15 11:29:23.173273 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Fri Apr 15 11:29:23.173291 2016] [wsgi:error] [pid 13434:tid 140198444779264] [client 84.39.232.242:54940] ImportError: cannot import name DB_UN
+[Mon Apr 18 10:02:20.145575 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291] mod_wsgi (pid=1173): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Mon Apr 18 10:02:20.148427 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291] mod_wsgi (pid=1173): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Mon Apr 18 10:02:20.148476 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291] Traceback (most recent call last):
+[Mon Apr 18 10:02:20.148504 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Mon Apr 18 10:02:20.148612 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     application = django.core.wsgi.get_wsgi_application()
+[Mon Apr 18 10:02:20.148632 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Mon Apr 18 10:02:20.149177 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     django.setup()
+[Mon Apr 18 10:02:20.149202 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Mon Apr 18 10:02:20.149916 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Mon Apr 18 10:02:20.149944 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Mon Apr 18 10:02:20.150533 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     self._setup(name)
+[Mon Apr 18 10:02:20.150543 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Mon Apr 18 10:02:20.150555 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     self._wrapped = Settings(settings_module)
+[Mon Apr 18 10:02:20.150560 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Mon Apr 18 10:02:20.150568 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Mon Apr 18 10:02:20.150572 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Apr 18 10:02:20.151119 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     __import__(name)
+[Mon Apr 18 10:02:20.151128 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Mon Apr 18 10:02:20.151212 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Mon Apr 18 10:02:20.151230 2016] [wsgi:error] [pid 1173:tid 139915924854528] [client 84.39.232.242:51291] ImportError: cannot import name DB_UN
+[Mon Apr 18 10:02:20.562130 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292] mod_wsgi (pid=1172): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Mon Apr 18 10:02:20.562164 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292] mod_wsgi (pid=1172): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Mon Apr 18 10:02:20.562183 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292] Traceback (most recent call last):
+[Mon Apr 18 10:02:20.562196 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Mon Apr 18 10:02:20.562243 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     application = django.core.wsgi.get_wsgi_application()
+[Mon Apr 18 10:02:20.562251 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Mon Apr 18 10:02:20.562278 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     django.setup()
+[Mon Apr 18 10:02:20.562287 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Mon Apr 18 10:02:20.562310 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Mon Apr 18 10:02:20.562317 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Mon Apr 18 10:02:20.562367 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     self._setup(name)
+[Mon Apr 18 10:02:20.562373 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Mon Apr 18 10:02:20.562383 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     self._wrapped = Settings(settings_module)
+[Mon Apr 18 10:02:20.562402 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Mon Apr 18 10:02:20.562411 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Mon Apr 18 10:02:20.562416 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Apr 18 10:02:20.562444 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     __import__(name)
+[Mon Apr 18 10:02:20.562450 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Mon Apr 18 10:02:20.562487 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Mon Apr 18 10:02:20.562502 2016] [wsgi:error] [pid 1172:tid 139916037568256] [client 84.39.232.242:51292] ImportError: cannot import name DB_UN
+[Mon Apr 18 10:02:20.599212 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293] mod_wsgi (pid=1173): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Mon Apr 18 10:02:20.599228 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293] mod_wsgi (pid=1173): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Mon Apr 18 10:02:20.599243 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293] Traceback (most recent call last):
+[Mon Apr 18 10:02:20.599258 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Mon Apr 18 10:02:20.599279 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     application = django.core.wsgi.get_wsgi_application()
+[Mon Apr 18 10:02:20.599285 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Mon Apr 18 10:02:20.599295 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     django.setup()
+[Mon Apr 18 10:02:20.599300 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Mon Apr 18 10:02:20.599308 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Mon Apr 18 10:02:20.599313 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Mon Apr 18 10:02:20.599321 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     self._setup(name)
+[Mon Apr 18 10:02:20.599325 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Mon Apr 18 10:02:20.599333 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     self._wrapped = Settings(settings_module)
+[Mon Apr 18 10:02:20.599337 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Mon Apr 18 10:02:20.599344 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Mon Apr 18 10:02:20.599349 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Apr 18 10:02:20.599356 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     __import__(name)
+[Mon Apr 18 10:02:20.599369 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Mon Apr 18 10:02:20.599377 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Mon Apr 18 10:02:20.599400 2016] [wsgi:error] [pid 1173:tid 139915916461824] [client 84.39.232.242:51293] ImportError: cannot import name DB_UN
+[Tue Apr 19 07:38:33.035875 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924] mod_wsgi (pid=2389): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Tue Apr 19 07:38:33.035911 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924] mod_wsgi (pid=2389): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Tue Apr 19 07:38:33.035930 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924] Traceback (most recent call last):
+[Tue Apr 19 07:38:33.035943 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Tue Apr 19 07:38:33.035990 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     application = django.core.wsgi.get_wsgi_application()
+[Tue Apr 19 07:38:33.035999 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 19 07:38:33.036025 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     django.setup()
+[Tue Apr 19 07:38:33.036034 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 19 07:38:33.036057 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 19 07:38:33.036064 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 19 07:38:33.036112 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     self._setup(name)
+[Tue Apr 19 07:38:33.036119 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 19 07:38:33.036129 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     self._wrapped = Settings(settings_module)
+[Tue Apr 19 07:38:33.036134 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 19 07:38:33.036141 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 19 07:38:33.036146 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 19 07:38:33.036170 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     __import__(name)
+[Tue Apr 19 07:38:33.036176 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 19 07:38:33.036212 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 19 07:38:33.036226 2016] [wsgi:error] [pid 2389:tid 139915924854528] [client 84.39.232.242:49924] ImportError: cannot import name DB_UN
+[Tue Apr 19 07:38:34.296993 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925] mod_wsgi (pid=2388): Target WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi' cannot be loaded as Python module.
+[Tue Apr 19 07:38:34.297032 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925] mod_wsgi (pid=2388): Exception occurred processing WSGI script '/home/ubuntu/ccr/ccr/ccr.wsgi'.
+[Tue Apr 19 07:38:34.297051 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925] Traceback (most recent call last):
+[Tue Apr 19 07:38:34.297064 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/home/ubuntu/ccr/ccr/ccr.wsgi", line 26, in <module>
+[Tue Apr 19 07:38:34.297110 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     application = django.core.wsgi.get_wsgi_application()
+[Tue Apr 19 07:38:34.297119 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Tue Apr 19 07:38:34.297144 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     django.setup()
+[Tue Apr 19 07:38:34.297152 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 17, in setup
+[Tue Apr 19 07:38:34.297175 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Tue Apr 19 07:38:34.297181 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 55, in __getattr__
+[Tue Apr 19 07:38:34.297229 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     self._setup(name)
+[Tue Apr 19 07:38:34.297235 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 43, in _setup
+[Tue Apr 19 07:38:34.297246 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     self._wrapped = Settings(settings_module)
+[Tue Apr 19 07:38:34.297250 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 99, in __init__
+[Tue Apr 19 07:38:34.297257 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Apr 19 07:38:34.297262 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Tue Apr 19 07:38:34.297286 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     __import__(name)
+[Tue Apr 19 07:38:34.297292 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]   File "/home/ubuntu/ccr/ccr/settings.py", line 13, in <module>
+[Tue Apr 19 07:38:34.297327 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925]     from access import DB_UN, DB_PW, SMTP_USER, SMTP_PASSWORD
+[Tue Apr 19 07:38:34.297341 2016] [wsgi:error] [pid 2388:tid 139915916461824] [client 84.39.232.242:49925] ImportError: cannot import name DB_UN
